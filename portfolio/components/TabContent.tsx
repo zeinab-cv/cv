@@ -1,5 +1,17 @@
 import { getThemeClasses } from '../lib/theme';
 import Skills from './Skills';
+import { 
+  IconSchool, 
+  IconBriefcase, 
+  IconPalette, 
+  IconHandStop, 
+  IconBook, 
+  IconWorld, 
+  IconEdit, 
+  IconMail, 
+  IconCoffee, 
+  IconHeart 
+} from '@tabler/icons-react';
 
 interface TabContentProps {
   activeTab: string;
@@ -36,8 +48,9 @@ export default function TabContent({ activeTab }: TabContentProps) {
             
             {/* Education Section */}
             <div className={`${theme.glassCard} rounded-2xl p-6`}>
-              <h3 className="text-xl font-semibold text-pink-400 mb-4 flex items-center">
-                🎓 Education
+              <h3 className="text-xl font-semibold text-pink-400 mb-4 flex items-center space-x-2">
+                <IconSchool size={24} />
+                <span>Education</span>
               </h3>
               <div className="space-y-4">
                 <div className="border-l-2 border-pink-400/30 pl-4">
@@ -57,8 +70,9 @@ export default function TabContent({ activeTab }: TabContentProps) {
             
             {/* Experience Section */}
             <div className={`${theme.glassCard} rounded-2xl p-6`}>
-              <h3 className="text-xl font-semibold text-purple-400 mb-4 flex items-center">
-                💼 Experience
+              <h3 className="text-xl font-semibold text-purple-400 mb-4 flex items-center space-x-2">
+                <IconBriefcase size={24} />
+                <span>Experience</span>
               </h3>
               <div className="space-y-4">
                 <div className="border-l-2 border-purple-400/30 pl-4">
@@ -87,7 +101,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
                 <div className="w-full h-32 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-4xl">🎨</span>
+                  <IconPalette size={48} className="text-pink-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Social Media Strategy</h3>
                 <p className="text-white/70 text-sm">Developed and implemented creative social media campaigns for various organizations.</p>
@@ -95,7 +109,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
               
               <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
                 <div className="w-full h-32 bg-gradient-to-br from-blue-400/20 to-green-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-4xl">🤝</span>
+                  <IconHandStop size={48} className="text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Project Coordination</h3>
                 <p className="text-white/70 text-sm">Coordinated multicultural projects and community development initiatives.</p>
@@ -103,7 +117,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
               
               <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
                 <div className="w-full h-32 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-4xl">📚</span>
+                  <IconBook size={48} className="text-yellow-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Non-formal Education</h3>
                 <p className="text-white/70 text-sm">Designed and facilitated workshops focused on active citizenship and dialogue.</p>
@@ -111,7 +125,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
               
               <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
                 <div className="w-full h-32 bg-gradient-to-br from-green-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-4xl">🌍</span>
+                  <IconWorld size={48} className="text-green-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Community Development</h3>
                 <p className="text-white/70 text-sm">Cultural well-being and community development initiatives across diverse environments.</p>
@@ -125,7 +139,9 @@ export default function TabContent({ activeTab }: TabContentProps) {
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Blog Posts</h2>
             <div className={`${theme.glassCard} rounded-2xl p-8 text-center`}>
-              <div className="text-6xl mb-4">📝</div>
+              <div className="flex justify-center mb-4">
+                <IconEdit size={64} className="text-purple-400" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-2">Coming Soon</h3>
               <p className="text-white/70">I&apos;m working on some exciting blog posts about project coordination, social development, and digital engagement. Stay tuned!</p>
             </div>
@@ -146,12 +162,17 @@ export default function TabContent({ activeTab }: TabContentProps) {
               <div className="space-y-4">
                 <a 
                   href="mailto:zeyndanesh@gmail.com"
-                  className="block w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
+                  className="inline-flex items-center space-x-2 w-full justify-center bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
                 >
-                  📧 Send Email
+                  <IconMail size={20} />
+                  <span>Send Email</span>
                 </a>
                 
-                <p className="text-white/70">☕ Coffee chats? I&apos;m in ❤</p>
+                <p className="text-white/70 flex items-center justify-center space-x-2">
+                  <IconCoffee size={16} />
+                  <span>Coffee chats? I&apos;m in</span>
+                  <IconHeart size={16} className="text-pink-400" />
+                </p>
               </div>
             </div>
           </div>

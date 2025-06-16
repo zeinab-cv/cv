@@ -1,4 +1,13 @@
 import { getThemeClasses } from '../lib/theme';
+import { 
+  IconMail, 
+  IconBrandLinkedin, 
+  IconLink, 
+  IconPhone, 
+  IconMapPin, 
+  IconCalendar,
+  IconDownload
+} from '@tabler/icons-react';
 
 export default function Sidebar() {
   const theme = getThemeClasses();
@@ -30,14 +39,14 @@ export default function Sidebar() {
           
           {/* Social Links */}
           <div className="flex justify-center space-x-4 mb-8">
-            <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300 animate-float" style={{ animationDelay: '0s' }}>
-              <span className="text-sm">📧</span>
+            <a href="mailto:zeyndanesh@gmail.com" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105  " style={{ animationDelay: '0s' }}>
+              <IconMail size={18} />
             </a>
-            <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300 animate-float" style={{ animationDelay: '1s' }}>
-              <span className="text-sm">💼</span>
+            <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105  ">
+              <IconBrandLinkedin size={18} />
             </a>
-            <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-110 transition-all duration-300 animate-float" style={{ animationDelay: '2s' }}>
-              <span className="text-sm">🔗</span>
+            <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105  ">
+              <IconLink size={18} />
             </a>
           </div>
         </div>
@@ -50,19 +59,19 @@ export default function Sidebar() {
         
         <div className="space-y-4 text-white relative z-10">
           <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <span className="text-pink-400">📱</span>
+            <IconPhone size={16} className="text-pink-400" />
             <span className="text-sm">+123 456 7890</span>
           </div>
           <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <span className="text-pink-400">📧</span>
+            <IconMail size={16} className="text-pink-400" />
             <span className="text-sm">zeyndanesh@gmail.com</span>
           </div>
           <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <span className="text-pink-400">📍</span>
+            <IconMapPin size={16} className="text-pink-400" />
             <span className="text-sm">Location</span>
           </div>
           <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <span className="text-pink-400">🎂</span>
+            <IconCalendar size={16} className="text-pink-400" />
             <span className="text-sm">May 27, 1990</span>
           </div>
         </div>
@@ -72,7 +81,10 @@ export default function Sidebar() {
       <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-6 rounded-2xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden group">
         {/* Button animation overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <span className="relative z-10">📄 Download CV</span>
+        <span className="relative z-10 flex items-center justify-center space-x-2">
+          <IconDownload size={18} />
+          <span>Download CV</span>
+        </span>
       </button>
     </div>
   );
