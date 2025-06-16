@@ -33,9 +33,37 @@ export default function Sidebar() {
           <h2 className="text-2xl font-bold text-white mb-2 drop-shadow-lg mt-20">
             Zeinab Daneshpour
           </h2>
-          <p className="text-white/80 mb-6 drop-shadow-sm">
+          <p className="text-white/80 mb-4 drop-shadow-sm">
             Project Coordinator
           </p>
+          
+          {/* Skill Tags */}
+          <div className="flex flex-wrap gap-2 justify-center mb-6">
+            <span className="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 hover:text-white hover:border-white/40 hover:shadow-lg hover:shadow-white/20 hover:scale-105 transition-all duration-300 cursor-pointer group relative overflow-hidden">
+              <span className="relative z-10">Project Coordination</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-400/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </span>
+            <span className="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 hover:text-white hover:border-white/40 hover:shadow-lg hover:shadow-blue-400/20 hover:scale-105 transition-all duration-300 cursor-pointer group relative overflow-hidden">
+              <span className="relative z-10">Cross-cultural Collaboration</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </span>
+            <span className="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 hover:text-white hover:border-white/40 hover:shadow-lg hover:shadow-green-400/20 hover:scale-105 transition-all duration-300 cursor-pointer group relative overflow-hidden">
+              <span className="relative z-10">Event Management</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </span>
+            <span className="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 hover:text-white hover:border-white/40 hover:shadow-lg hover:shadow-purple-400/20 hover:scale-105 transition-all duration-300 cursor-pointer group relative overflow-hidden">
+              <span className="relative z-10">Workshop Facilitation</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </span>
+            <span className="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 hover:text-white hover:border-white/40 hover:shadow-lg hover:shadow-yellow-400/20 hover:scale-105 transition-all duration-300 cursor-pointer group relative overflow-hidden">
+              <span className="relative z-10">Visual Design</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </span>
+            <span className="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 hover:text-white hover:border-white/40 hover:shadow-lg hover:shadow-indigo-400/20 hover:scale-105 transition-all duration-300 cursor-pointer group relative overflow-hidden">
+              <span className="relative z-10">Documentation & Reporting</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </span>
+          </div>
           
           {/* Social Links */}
           <div className="flex justify-center space-x-4 mb-8">
