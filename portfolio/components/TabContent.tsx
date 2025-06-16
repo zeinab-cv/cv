@@ -1,5 +1,6 @@
 import { getThemeClasses } from '../lib/theme';
 import Skills from './Skills';
+import WorksTabs from './WorksTabs';
 import { 
   IconSchool, 
   IconBriefcase, 
@@ -97,40 +98,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
         return (
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">My Works</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
-                <div className="w-full h-32 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <IconPalette size={48} className="text-pink-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Social Media Strategy</h3>
-                <p className="text-white/70 text-sm">Developed and implemented creative social media campaigns for various organizations.</p>
-              </div>
-              
-              <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
-                <div className="w-full h-32 bg-gradient-to-br from-blue-400/20 to-green-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <IconHandStop size={48} className="text-blue-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Project Coordination</h3>
-                <p className="text-white/70 text-sm">Coordinated multicultural projects and community development initiatives.</p>
-              </div>
-              
-              <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
-                <div className="w-full h-32 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <IconBook size={48} className="text-yellow-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Non-formal Education</h3>
-                <p className="text-white/70 text-sm">Designed and facilitated workshops focused on active citizenship and dialogue.</p>
-              </div>
-              
-              <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
-                <div className="w-full h-32 bg-gradient-to-br from-green-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <IconWorld size={48} className="text-green-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Community Development</h3>
-                <p className="text-white/70 text-sm">Cultural well-being and community development initiatives across diverse environments.</p>
-              </div>
-            </div>
+            <WorksTabs />
           </div>
         );
         
