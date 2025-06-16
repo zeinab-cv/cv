@@ -3,7 +3,7 @@ import {
   IconHome, 
   IconFileText, 
   IconBriefcase, 
-  IconEdit, 
+  IconBrain, 
   IconPhone 
 } from '@tabler/icons-react';
 
@@ -19,7 +19,7 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
     { id: 'home', label: 'Home', icon: IconHome },
     { id: 'resume', label: 'Resume', icon: IconFileText },
     { id: 'works', label: 'Works', icon: IconBriefcase },
-    { id: 'blogs', label: 'Blogs', icon: IconEdit },
+    { id: 'skills', label: 'Skills', icon: IconBrain },
     { id: 'contact', label: 'Contact', icon: IconPhone }
   ];
   

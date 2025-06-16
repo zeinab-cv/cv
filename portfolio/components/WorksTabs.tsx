@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { getThemeClasses } from '../lib/theme';
 import { 
   IconPalette, 
   IconHandStop, 
@@ -14,7 +13,6 @@ import {
 
 export default function WorksTabs() {
   const [activeTab, setActiveTab] = useState('projects');
-  const theme = getThemeClasses();
 
   const tabs = [
     { id: 'projects', label: 'Projects', icon: IconPalette },
@@ -27,7 +25,7 @@ export default function WorksTabs() {
       case 'projects':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconPalette size={48} className="text-pink-400" />
               </div>
@@ -35,7 +33,7 @@ export default function WorksTabs() {
               <p className="text-white/70 text-sm">Developed and implemented creative social media campaigns for various organizations.</p>
             </div>
             
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-blue-400/20 to-green-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconHandStop size={48} className="text-blue-400" />
               </div>
@@ -43,7 +41,7 @@ export default function WorksTabs() {
               <p className="text-white/70 text-sm">Coordinated multicultural projects and community development initiatives.</p>
             </div>
             
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconBook size={48} className="text-yellow-400" />
               </div>
@@ -51,7 +49,7 @@ export default function WorksTabs() {
               <p className="text-white/70 text-sm">Designed and facilitated workshops focused on active citizenship and dialogue.</p>
             </div>
             
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-green-400/20 to-teal-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconWorld size={48} className="text-green-400" />
               </div>
@@ -64,7 +62,7 @@ export default function WorksTabs() {
       case 'events':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconCalendarEvent size={48} className="text-purple-400" />
               </div>
@@ -72,7 +70,7 @@ export default function WorksTabs() {
               <p className="text-white/70 text-sm">Organized and facilitated workshops on active citizenship and community engagement.</p>
             </div>
             
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconBuildingCommunity size={48} className="text-blue-400" />
               </div>
@@ -80,7 +78,7 @@ export default function WorksTabs() {
               <p className="text-white/70 text-sm">Hosted multicultural events promoting dialogue and understanding between communities.</p>
             </div>
             
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconUsers size={48} className="text-green-400" />
               </div>
@@ -93,7 +91,7 @@ export default function WorksTabs() {
       case 'organizations':
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-indigo-400/20 to-purple-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconBuildingCommunity size={48} className="text-indigo-400" />
               </div>
@@ -101,7 +99,7 @@ export default function WorksTabs() {
               <p className="text-white/70 text-sm">Project Coordinator role focusing on national and international project planning and implementation.</p>
             </div>
             
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-pink-400/20 to-rose-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconUsers size={48} className="text-pink-400" />
               </div>
@@ -109,7 +107,7 @@ export default function WorksTabs() {
               <p className="text-white/70 text-sm">Social Media & Marketing Team member, developing inclusive marketing strategies and content.</p>
             </div>
             
-            <div className={`${theme.glassCard} rounded-2xl p-6 hover:scale-105 transition-transform duration-300`}>
+            <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-32 bg-gradient-to-br from-teal-400/20 to-cyan-400/20 rounded-xl mb-4 flex items-center justify-center">
                 <IconWorld size={48} className="text-teal-400" />
               </div>

@@ -18,7 +18,7 @@ export default function Skills() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* Working Skills */}
-      <div className={`${theme.glassCard} rounded-2xl p-6`}>
+      <div className="rounded-2xl p-6">
         <h3 className="text-xl font-semibold text-blue-400 mb-4">Working Skills</h3>
         <div className="space-y-4">
           {workingSkills.map((skill) => (
@@ -39,7 +39,7 @@ export default function Skills() {
       </div>
       
       {/* Knowledge Tags */}
-      <div className={`${theme.glassCard} rounded-2xl p-6`}>
+      <div className="rounded-2xl p-6">
         <h3 className="text-xl font-semibold text-green-400 mb-4">Knowledge</h3>
         <div className="flex flex-wrap gap-2">
           {knowledges.map((knowledge) => (

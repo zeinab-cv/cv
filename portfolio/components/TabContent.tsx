@@ -1,14 +1,10 @@
 import { getThemeClasses } from '../lib/theme';
-import Skills from './Skills';
 import WorksTabs from './WorksTabs';
 import { 
   IconSchool, 
   IconBriefcase, 
-  IconPalette, 
-  IconHandStop, 
-  IconBook, 
-  IconWorld, 
-  IconEdit, 
+  IconBrain,
+  IconWorld,
   IconMail, 
   IconCoffee, 
   IconHeart 
@@ -20,6 +16,41 @@ interface TabContentProps {
 
 export default function TabContent({ activeTab }: TabContentProps) {
   const theme = getThemeClasses();
+  
+  const workingSkills = [
+    { name: 'Project Coordination', level: 90 },
+    { name: 'Social Media Strategy', level: 85 },
+    { name: 'Cross-cultural Communication', level: 95 },
+    { name: 'Event Management', level: 80 }
+  ];
+  
+  const knowledges = [
+    'Digital Marketing', 'Content Creation', 'WordPress', 'Canva',
+    'Microsoft Office', 'Video Editing', 'Community Engagement', 'Multicultural Teams'
+  ];
+
+  const languages = [
+    { name: 'English', level: 5 },
+    { name: 'Persian', level: 5 },
+    { name: 'Finnish', level: 2 }
+  ];
+
+  const renderLanguageBalls = (level: number) => {
+    return (
+      <div className="flex space-x-1">
+        {[1, 2, 3, 4, 5].map((ball) => (
+          <div
+            key={ball}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              ball <= level 
+                ? 'bg-gradient-to-r from-blue-400 to-purple-500 shadow-sm' 
+                : 'bg-white/20 border border-white/30'
+            }`}
+          />
+        ))}
+      </div>
+    );
+  };
   
   const renderContent = () => {
     switch (activeTab) {
@@ -48,8 +79,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
             <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Resume</h2>
             
             {/* Education Section */}
-            <div className={`${theme.glassCard} rounded-2xl p-6`}>
-              <h3 className="text-xl font-semibold text-pink-400 mb-4 flex items-center space-x-2">
+            <div className="rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
                 <IconSchool size={24} />
                 <span>Education</span>
               </h3>
@@ -70,8 +101,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
             </div>
             
             {/* Experience Section */}
-            <div className={`${theme.glassCard} rounded-2xl p-6`}>
-              <h3 className="text-xl font-semibold text-purple-400 mb-4 flex items-center space-x-2">
+            <div className="rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
                 <IconBriefcase size={24} />
                 <span>Experience</span>
               </h3>
@@ -88,9 +119,6 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 </div>
               </div>
             </div>
-            
-            {/* Skills Section */}
-            <Skills />
           </div>
         );
         
@@ -102,16 +130,66 @@ export default function TabContent({ activeTab }: TabContentProps) {
           </div>
         );
         
-      case 'blogs':
+      case 'skills':
         return (
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Blog Posts</h2>
-            <div className={`${theme.glassCard} rounded-2xl p-8 text-center`}>
-              <div className="flex justify-center mb-4">
-                <IconEdit size={64} className="text-purple-400" />
+            <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Skills & Expertise</h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Working Skills */}
+              <div className="rounded-2xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
+                  <IconBrain size={24} />
+                  <span>Working Skills</span>
+                </h3>
+                <div className="space-y-4">
+                  {workingSkills.map((skill) => (
+                    <div key={skill.name}>
+                      <div className="flex justify-between mb-2">
+                        <span className="text-white text-sm font-medium">{skill.name}</span>
+                        <span className="text-white/70 text-sm">{skill.level}%</span>
+                      </div>
+                      <div className="w-full bg-white/10 rounded-full h-2">
+                        <div 
+                          className="bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full transition-all duration-1000"
+                          style={{ width: `${skill.level}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Coming Soon</h3>
-              <p className="text-white/70">I&apos;m working on some exciting blog posts about project coordination, social development, and digital engagement. Stay tuned!</p>
+              
+              {/* Language Skills */}
+              <div className="rounded-2xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
+                  <IconWorld size={24} />
+                  <span>Language Skills</span>
+                </h3>
+                <div className="space-y-4">
+                  {languages.map((language) => (
+                    <div key={language.name} className="flex items-center justify-between">
+                      <span className="text-white text-sm font-medium">{language.name}</span>
+                      {renderLanguageBalls(language.level)}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            {/* Knowledge Tags */}
+            <div className="rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Knowledge & Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {knowledges.map((knowledge) => (
+                  <span 
+                    key={knowledge}
+                    className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
+                  >
+                    {knowledge}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         );
