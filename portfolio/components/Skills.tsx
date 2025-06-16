@@ -3,44 +3,55 @@ import { getThemeClasses } from '../lib/theme';
 export default function Skills() {
   const theme = getThemeClasses();
   
-  const skills = [
-    "Project Coordination",
-    "Cross-cultural Communication", 
-    "Social Media Strategy",
-    "Event Management",
-    "Microsoft Office",
-    "WordPress",
-    "Canva",
-    "Video Editing"
+  const workingSkills = [
+    { name: 'Project Coordination', level: 90 },
+    { name: 'Social Media Strategy', level: 85 },
+    { name: 'Cross-cultural Communication', level: 95 },
+    { name: 'Event Management', level: 80 }
   ];
-
+  
+  const knowledges = [
+    'Digital Marketing', 'Content Creation', 'WordPress', 'Canva',
+    'Microsoft Office', 'Video Editing', 'Community Engagement', 'Multicultural Teams'
+  ];
+  
   return (
-    <section className={`py-20 px-4 ${theme.sectionAltBg} relative`}>
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-blue-300/10 rounded-full blur-lg animate-pulse delay-1000"></div>
-      </div>
-      
-      <div className="max-w-4xl mx-auto relative z-10">
-        <h2 className={`text-3xl font-bold ${theme.whiteText} mb-12 text-center drop-shadow-lg`}>Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {skills.map((skill, index) => (
-            <div 
-              key={skill} 
-              className={`${theme.skillCard} p-6 rounded-xl ${theme.glassShadow} text-center group cursor-pointer transform hover:scale-105 hover:-translate-y-1`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Inner glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <span className={`${theme.whiteText} font-medium relative z-10 drop-shadow-sm`}>
-                {skill}
-              </span>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Working Skills */}
+      <div className={`${theme.glassCard} rounded-2xl p-6`}>
+        <h3 className="text-xl font-semibold text-blue-400 mb-4">Working Skills</h3>
+        <div className="space-y-4">
+          {workingSkills.map((skill) => (
+            <div key={skill.name}>
+              <div className="flex justify-between mb-2">
+                <span className="text-white text-sm font-medium">{skill.name}</span>
+                <span className="text-white/70 text-sm">{skill.level}%</span>
+              </div>
+              <div className="w-full bg-white/10 rounded-full h-2">
+                <div 
+                  className="bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full transition-all duration-1000"
+                  style={{ width: `${skill.level}%` }}
+                ></div>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </section>
+      
+      {/* Knowledge Tags */}
+      <div className={`${theme.glassCard} rounded-2xl p-6`}>
+        <h3 className="text-xl font-semibold text-green-400 mb-4">Knowledge</h3>
+        <div className="flex flex-wrap gap-2">
+          {knowledges.map((knowledge) => (
+            <span 
+              key={knowledge}
+              className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
+            >
+              {knowledge}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 } 
