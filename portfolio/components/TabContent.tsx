@@ -56,8 +56,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
     switch (activeTab) {
       case 'home':
         return (
-          <div className="space-y-8">
-            <div className="text-center">
+          <div className="space-y-6">
+            <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
               <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
                 Welcome to My Portfolio
               </h1>
@@ -75,11 +75,9 @@ export default function TabContent({ activeTab }: TabContentProps) {
         
       case 'resume':
         return (
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Resume</h2>
-            
+          <div className="space-y-6">
             {/* Education Section */}
-            <div className="rounded-2xl p-6">
+            <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
                 <IconSchool size={24} />
                 <span>Education</span>
@@ -101,7 +99,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
             </div>
             
             {/* Experience Section */}
-            <div className="rounded-2xl p-6">
+            <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
               <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
                 <IconBriefcase size={24} />
                 <span>Experience</span>
@@ -124,20 +122,18 @@ export default function TabContent({ activeTab }: TabContentProps) {
         
       case 'works':
         return (
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">My Works</h2>
+          <div className="space-y-6">
             <WorksTabs />
           </div>
         );
         
       case 'skills':
         return (
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Skills & Expertise</h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            {/* Working Skills and Language Skills - Side by Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Working Skills */}
-              <div className="rounded-2xl p-6">
+              <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
                   <IconBrain size={24} />
                   <span>Working Skills</span>
@@ -161,7 +157,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
               </div>
               
               {/* Language Skills */}
-              <div className="rounded-2xl p-6">
+              <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
                   <IconWorld size={24} />
                   <span>Language Skills</span>
@@ -177,8 +173,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
               </div>
             </div>
             
-            {/* Knowledge Tags */}
-            <div className="rounded-2xl p-6">
+            {/* Knowledge & Tools */}
+            <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
               <h3 className="text-xl font-semibold text-white mb-4">Knowledge & Tools</h3>
               <div className="flex flex-wrap gap-2">
                 {knowledges.map((knowledge) => (
@@ -196,10 +192,9 @@ export default function TabContent({ activeTab }: TabContentProps) {
         
       case 'contact':
         return (
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Get In Touch</h2>
-            
-            <div className={`${theme.glassCard} rounded-2xl p-8 text-center`}>
+          <div className="space-y-6">
+            <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
+              <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">Get In Touch</h2>
               <h3 className="text-xl font-semibold text-white mb-4">Let&apos;s Connect!</h3>
               <p className="text-white/80 mb-6">
                 I&apos;m excited about joining a team where I can contribute meaningfully and continue to grow.
@@ -230,7 +225,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
   };
   
   return (
-    <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} min-h-[600px]`}>
+    <div className="space-y-6">
       {renderContent()}
     </div>
   );

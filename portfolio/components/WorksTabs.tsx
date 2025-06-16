@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { getThemeClasses } from '../lib/theme';
 import { 
   IconPalette, 
   IconHandStop, 
@@ -13,6 +14,7 @@ import {
 
 export default function WorksTabs() {
   const [activeTab, setActiveTab] = useState('projects');
+  const theme = getThemeClasses();
 
   const tabs = [
     { id: 'projects', label: 'Projects', icon: IconPalette },
@@ -125,29 +127,33 @@ export default function WorksTabs() {
   return (
     <div className="space-y-6">
       {/* Tab Navigation */}
-      <div className="flex flex-wrap gap-2">
-        {tabs.map((tab) => {
-          const IconComponent = tab.icon;
-          return (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg'
-                  : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-              }`}
-            >
-              <IconComponent size={18} />
-              <span className="text-sm">{tab.label}</span>
-            </button>
-          );
-        })}
+      <div className={`${theme.glassOverlay} rounded-3xl p-6 ${theme.glassShadow}`}>
+        <div className="flex flex-wrap gap-2">
+          {tabs.map((tab) => {
+            const IconComponent = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg'
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <IconComponent size={18} />
+                <span className="text-sm">{tab.label}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Tab Content */}
-      <div className="min-h-[400px]">
-        {renderTabContent()}
+      <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
+        <div className="min-h-[400px]">
+          {renderTabContent()}
+        </div>
       </div>
     </div>
   );
