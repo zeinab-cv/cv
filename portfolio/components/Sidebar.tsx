@@ -13,8 +13,11 @@ export default function Sidebar() {
   const theme = getThemeClasses();
   
   return (
-    <div className="sticky top-8 h-fit">
+    <div className="sticky top-8 h-fit mt">
       {/* Main Profile Card */}
+          <div className="w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white text-6xl font-bold shadow-lg hover:scale-110 transition-transform z-[100]">
+            ZD
+          </div>
       <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} relative overflow-hidden hover:scale-105 transition-transform duration-300`}>
         {/* Background gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-pink-400/20 via-blue-400/20 to-purple-400/20 rounded-3xl"></div>
@@ -25,12 +28,9 @@ export default function Sidebar() {
         
         <div className="relative z-10 text-center">
           {/* Profile Image Placeholder */}
-          <div className="w-32 h-32 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white text-4xl font-bold shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse-glow">
-            ZD
-          </div>
           
           {/* Name and Title */}
-          <h2 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
+          <h2 className="text-2xl font-bold text-white mb-2 drop-shadow-lg mt-20">
             Zeinab Daneshpour
           </h2>
           <p className="text-white/80 mb-6 drop-shadow-sm">
@@ -39,40 +39,40 @@ export default function Sidebar() {
           
           {/* Social Links */}
           <div className="flex justify-center space-x-4 mb-8">
-            <a href="mailto:zeyndanesh@gmail.com" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105  " style={{ animationDelay: '0s' }}>
-              <IconMail size={18} />
+            <a href="mailto:zeyndanesh@gmail.com" className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105" style={{ animationDelay: '0s' }}>
+              <IconMail size={22} className="text-white" />
             </a>
-            <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105  ">
-              <IconBrandLinkedin size={18} />
+            <a href="#" className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105">
+              <IconBrandLinkedin size={22} className="text-white" />
             </a>
-            <a href="#" className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105  ">
-              <IconLink size={18} />
+            <a href="#" className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:scale-105">
+              <IconLink size={22} className="text-white" />
             </a>
           </div>
         </div>
       </div>
       
       {/* Contact Info Card */}
-      <div className={`${theme.glassCard} rounded-2xl p-6 mt-6 ${theme.cardShadow} hover:scale-105 transition-transform duration-300 relative overflow-hidden`}>
+      <div className={`${theme.glassCard} rounded-2xl p-8 mt-6 ${theme.cardShadow} hover:scale-105 transition-transform duration-300 relative overflow-hidden`}>
         {/* Subtle animated background */}
         <div className="absolute top-2 right-2 w-4 h-4 bg-pink-400/20 rounded-full animate-pulse"></div>
         
-        <div className="space-y-4 text-white relative z-10">
-          <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <IconPhone size={16} className="text-pink-400" />
-            <span className="text-sm">+123 456 7890</span>
+        <div className="space-y-6 text-white relative z-10">
+          <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
+            <IconPhone size={24} className="text-white" />
+            <span className="text-base">+123 456 7890</span>
           </div>
-          <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <IconMail size={16} className="text-pink-400" />
-            <span className="text-sm">zeyndanesh@gmail.com</span>
+          <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
+            <IconMail size={24} className="text-white" />
+            <span className="text-base">zeyndanesh@gmail.com</span>
           </div>
-          <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <IconMapPin size={16} className="text-pink-400" />
-            <span className="text-sm">Location</span>
+          <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
+            <IconMapPin size={24} className="text-white" />
+            <span className="text-base">Location</span>
           </div>
-          <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
-            <IconCalendar size={16} className="text-pink-400" />
-            <span className="text-sm">May 27, 1990</span>
+          <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
+            <IconCalendar size={24} className="text-white" />
+            <span className="text-base">May 27, 1990</span>
           </div>
         </div>
       </div>

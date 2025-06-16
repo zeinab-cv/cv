@@ -10,12 +10,12 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('home');
   
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden ">
       {/* Animated Background */}
       <AnimatedBackground />
       
       {/* Main Content */}
-      <div className="relative z-10 p-4 md:p-8">
+      <div className="relative z-10 p-4 md:p-8 mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Sidebar - Sticky */}
