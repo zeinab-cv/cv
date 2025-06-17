@@ -135,27 +135,259 @@ export default function WorksTabs() {
   const renderTabContent = () => {
     switch (activeTab) {
       case 'projects':
+        const workExperienceByOrganization = [
+          {
+            "organization": "Nordic Inclusify ry",
+            "location": "Helsinki, Uusimaa, Finland",
+            "positions": [
+              {
+                "worktitle": "Board Member | Marketing & Social Media Team",
+                "duration": "Aug 2024 – Present · 11 mos",
+                "description": "Drive DEI initiatives by organizing events and leading marketing-social media, building stakeholder partnerships for community engagement and advocacy.",
+                "projects": []
+              }
+            ]
+          },
+          {
+            "organization": "Cooperative 3E",
+            "location": "Vaasa, Ostrobothnia, Finland",
+            "positions": [
+              {
+                "worktitle": "Coordinator, Youth Engagement & Administration",
+                "duration": "Mar 2024 – Present · 1 yr 4 mos",
+                "description": "Develops and oversees youth-focused projects, events, and workshops at national and international levels, ensuring inclusive participation.",
+                "projects": [
+                  {
+                    "projectname": "Youth for Non-Violent Behavior on Digital Media",
+                    "projectdescription": "Organises Speaker Corner events on online violence, securing speakers, partnering with cities and NGOs, running workshops, and documenting outcomes."
+                  },
+                  {
+                    "projectname": "Magazine Y's Vendors",
+                    "projectdescription": "Recruits and trains cultural-magazine vendors, designing sessions on product knowledge, pitching, and handling objections."
+                  }
+                ]
+              },
+              {
+                "worktitle": "Project Officer",
+                "duration": "Nov 2023 – Present · 1 yr 8 mos",
+                "description": "Facilitates youth communication and digital-literacy activities, supporting cross-cultural storytelling and project planning.",
+                "projects": [
+                  {
+                    "projectname": "Digital Storytelling for Active Citizenship",
+                    "projectdescription": "Connects German and Finnish youth to craft migration narratives, combat misinformation, and strengthen media skills."
+                  }
+                ]
+              },
+              {
+                "worktitle": "Project Officer",
+                "duration": "Jan 2023 – Present · 2 yrs 6 mos",
+                "description": "Empowers marginalized youth to publish multilingual media and Magazine Y, coordinating workshops, video production, and partnerships.",
+                "projects": [
+                  {
+                    "projectname": "Youth in Focus – Multilingual Youth Media Project",
+                    "projectdescription": "Guides youth in storytelling on global issues, supports Magazine Y publication, and fosters inclusive society."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "organization": "Rauhankasvatusinstituutti – The Peace Education Institute",
+            "location": "Helsinki, Uusimaa, Finland / Finland (Hybrid)",
+            "positions": [
+              {
+                "worktitle": "Steering Group Member",
+                "duration": "Dec 2023 – Sep 2024 · 10 mos",
+                "description": "Organised peace-education workshops and launched Nordic youth network, leading content creation and partnerships against hate speech.",
+                "projects": [
+                  {
+                    "projectname": "Nordic Youth Network Against Hate Speech",
+                    "projectdescription": "Builds cross-Nordic collaboration, manages workshops, study visits, Instagram presence, and youth engagement to counter hate speech."
+                  }
+                ]
+              },
+              {
+                "worktitle": "Project Coordinator",
+                "duration": "Nov 2023 – Jul 2024 · 9 mos",
+                "description": "Led intergenerational dialogue initiative, collecting letters and hosting events to bridge generational gaps through storytelling.",
+                "projects": [
+                  {
+                    "projectname": "Letters from the Generations",
+                    "projectdescription": "Crowdsources letters, photos, and interviews to spark dialogue and empathy between age groups."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "organization": "UN Youth of Finland",
+            "location": "Helsinki, Uusimaa, Finland / Hybrid",
+            "positions": [
+              {
+                "worktitle": "International Affairs Coordinator",
+                "duration": "Jan 2023 – Dec 2023 · 1 yr",
+                "description": "Organized No Hate Speech event, Vienna study visit, and partnerships, expanding youth engagement in international policy.",
+                "projects": [
+                  {
+                    "projectname": "No Hate Speech Event & Vienna Study Visit",
+                    "projectdescription": "Coordinated event and excursion connecting youth with key international organizations and anti-hate partners."
+                  }
+                ]
+              },
+              {
+                "worktitle": "Communication Coordinator",
+                "duration": "Jan 2022 – Dec 2022 · 1 yr",
+                "description": "Managed social-media campaigns and partnerships, raising awareness of UN goals and peace initiatives among Finnish youth.",
+                "projects": [
+                  {
+                    "projectname": "Youth Peace Week Campaign",
+                    "projectdescription": "Designed Instagram feeds and activities with UN Association of Finland to promote SDGs and peace."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "organization": "Girls in Marketing",
+            "location": "Liverpool, England, United Kingdom (Remote)",
+            "positions": [
+              {
+                "worktitle": "Digital Marketing Trainee – Virtual Training Program",
+                "duration": "Sep 2024 – Sep 2024 · 1 mo",
+                "description": "Completed intensive three-day program with Semrush, Adobe, and RISER, gaining practical skills in content, social media, and analytics.",
+                "projects": []
+              }
+            ]
+          },
+          {
+            "organization": "Women4Cyber Finland",
+            "location": "Finland (Remote)",
+            "positions": [
+              {
+                "worktitle": "Social Media Team Member",
+                "duration": "Jan 2024 – Aug 2024 · 8 mos",
+                "description": "Produced social content and coordinated job-seeking campaign, linking experts with aspiring cybersecurity professionals.",
+                "projects": [
+                  {
+                    "projectname": "Cybersecurity Job-Seeking Campaign",
+                    "projectdescription": "Collected industry advice and increased social-media engagement to support entry-level job seekers."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "organization": "NewGen Peace Program",
+            "location": "Helsinki, Uusimaa, Finland",
+            "positions": [
+              {
+                "worktitle": "Engaged Attendee – NewGen Peace Working Training",
+                "duration": "Jan 2023 – Dec 2023 · 1 yr",
+                "description": "Joined Europe-wide peace workshops, co-creating projects and securing funding for youth peacebuilding efforts.",
+                "projects": [
+                  {
+                    "projectname": "Letters from Generations",
+                    "projectdescription": "Collaborated on funded peacebuilding project enhancing intergenerational understanding."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "organization": "Symbiosis Tampere",
+            "location": "Tampere, Pirkanmaa, Finland",
+            "positions": [
+              {
+                "worktitle": "Data Analyst & Workshop Coordinator",
+                "duration": "Nov 2022 – Jan 2023 · 3 mos",
+                "description": "Analyzed employability data and organized workshops to support international students' transition into Tampere's job market.",
+                "projects": [
+                  {
+                    "projectname": "International Employability Landscape",
+                    "projectdescription": "Surveyed students, produced analytical reports, and facilitated knowledge-sharing workshops."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "organization": "Clean Air Project (Social Change Nest Impact)",
+            "location": "Various",
+            "positions": [
+              {
+                "worktitle": "Event Coordinator",
+                "duration": "Sep 2022 – Nov 2022 · 3 mos",
+                "description": "Led Clean Air Project events, handling administration, team leadership, and content creation for workshops.",
+                "projects": [
+                  {
+                    "projectname": "Clean Air Project",
+                    "projectdescription": "Coordinated campaign funded by Social Change Nest Impact to raise air-quality awareness."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "organization": "Tampere University",
+            "location": "Tampere, Pirkanmaa, Finland",
+            "positions": [
+              {
+                "worktitle": "Intern – International Education & Integration",
+                "duration": "May 2022 – Oct 2022 · 6 mos",
+                "description": "Supported Guidebook app, events, and employability project, improving services for international students.",
+                "projects": [
+                  {
+                    "projectname": "Guidebook App Content Coordination",
+                    "projectdescription": "Curated content and managed tutor communications for international-student guide."
+                  },
+                  {
+                    "projectname": "Study & Stay Employability Project",
+                    "projectdescription": "Collaborated with International Tampere House to enhance student employability initiatives."
+                  }
+                ]
+              }
+            ]
+          }
+        ];
+
         return (
-          <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
-            <div className="min-h-[400px] space-y-4">
-              <div className="border-l-2 border-purple-400/30 pl-4 hover:bg-white/5 p-4 rounded-r-xl transition-all duration-300">
-                <div className="flex items-center space-x-3 mb-2">
-                  <IconBriefcase size={20} className="text-purple-400" />
-                  <h4 className="font-semibold text-white">Project Coordinator</h4>
+          <div className="space-y-6">
+            {workExperienceByOrganization.map((org, orgIndex) => (
+              <div key={orgIndex} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
+                <div className="flex items-start space-x-3 mb-6">
+                  <IconBriefcase size={24} className="text-purple-400 mt-1" />
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-1">{org.organization}</h3>
+                    <p className="text-white/60 text-sm mb-4">{org.location}</p>
+                    
+                    {/* Multiple positions within the organization */}
+                    <div className="space-y-6">
+                      {org.positions.map((position, positionIndex) => (
+                        <div key={positionIndex} className="border-l-2 border-purple-400/30 pl-4">
+                          <h4 className="text-lg font-semibold text-white mb-1">{position.worktitle}</h4>
+                          <p className="text-purple-400 text-sm mb-1">{position.duration}</p>
+                          <p className="text-white/70 text-sm mb-4">{position.description}</p>
+                          
+                          {position.projects && position.projects.length > 0 && (
+                            <div className="space-y-3">
+                              <h5 className="text-base font-medium text-white">Key Projects:</h5>
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                {position.projects.map((project, projectIndex) => (
+                                  <div key={projectIndex} className="border-l-2 border-purple-400/20 pl-4 hover:bg-white/5 p-3 rounded-r-xl transition-all duration-300">
+                                    <h6 className="font-medium text-white/90 mb-1">{project.projectname}</h6>
+                                    <p className="text-white/60 text-sm">{project.projectdescription}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <p className="text-purple-400 text-sm mb-2">Osuuskunta 3E • Jan 2023 - Present</p>
-                <p className="text-white/70 text-sm">Leading role in planning, monitoring and reporting national and international projects.</p>
               </div>
-              
-              <div className="border-l-2 border-purple-400/30 pl-4 hover:bg-white/5 p-4 rounded-r-xl transition-all duration-300">
-                <div className="flex items-center space-x-3 mb-2">
-                  <IconPalette size={20} className="text-purple-400" />
-                  <h4 className="font-semibold text-white">Social Media & Marketing Team</h4>
-                </div>
-                <p className="text-purple-400 text-sm mb-2">Nordic Inclusify ry • Aug 2024 - Present</p>
-                <p className="text-white/70 text-sm">Managed social media channels, creating engaging content, developing marketing strategy.</p>
-              </div>
-            </div>
+            ))}
           </div>
         );
 

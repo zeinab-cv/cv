@@ -1,0 +1,182 @@
+workExperience = [
+  {
+    "worktitle": "Board Member | Marketing & Social Media Team",
+    "workplace": "Nordic Inclusify ry",
+    "duration": "Aug 2024 – Present · 11 mos",
+    "location": "Helsinki, Uusimaa, Finland",
+    "description": "Drive DEI initiatives by organizing events and leading marketing-social media, building stakeholder partnerships for community engagement and advocacy.",
+    "projects": []
+  },
+  {
+    "worktitle": "Coordinator, Youth Engagement & Administration",
+    "workplace": "Cooperative 3E",
+    "duration": "Mar 2024 – Present · 1 yr 4 mos",
+    "location": "Vaasa, Ostrobothnia, Finland (Hybrid)",
+    "description": "Develops and oversees youth-focused projects, events, and workshops at national and international levels, ensuring inclusive participation.",
+    "projects": [
+      {
+        "projectname": "Youth for Non-Violent Behavior on Digital Media",
+        "projectdescription": "Organises Speaker Corner events on online violence, securing speakers, partnering with cities and NGOs, running workshops, and documenting outcomes."
+      },
+      {
+        "projectname": "Magazine Y’s Vendors",
+        "projectdescription": "Recruits and trains cultural-magazine vendors, designing sessions on product knowledge, pitching, and handling objections."
+      }
+    ]
+  },
+  {
+    "worktitle": "Project Officer",
+    "workplace": "Cooperative 3E",
+    "duration": "Nov 2023 – Present · 1 yr 8 mos",
+    "location": "Vaasa, Ostrobothnia, Finland (Part-time)",
+    "description": "Facilitates youth communication and digital-literacy activities, supporting cross-cultural storytelling and project planning.",
+    "projects": [
+      {
+        "projectname": "Digital Storytelling for Active Citizenship",
+        "projectdescription": "Connects German and Finnish youth to craft migration narratives, combat misinformation, and strengthen media skills."
+      }
+    ]
+  },
+  {
+    "worktitle": "Project Officer",
+    "workplace": "Cooperative 3E",
+    "duration": "Jan 2023 – Present · 2 yrs 6 mos",
+    "location": "Vaasa, Ostrobothnia, Finland (Part-time)",
+    "description": "Empowers marginalized youth to publish multilingual media and Magazine Y, coordinating workshops, video production, and partnerships.",
+    "projects": [
+      {
+        "projectname": "Youth in Focus – Multilingual Youth Media Project",
+        "projectdescription": "Guides youth in storytelling on global issues, supports Magazine Y publication, and fosters inclusive society."
+      }
+    ]
+  },
+  {
+    "worktitle": "Digital Marketing Trainee – Virtual Training Program",
+    "workplace": "Girls in Marketing",
+    "duration": "Sep 2024 – Sep 2024 · 1 mo",
+    "location": "Liverpool, England, United Kingdom (Remote)",
+    "description": "Completed intensive three-day program with Semrush, Adobe, and RISER, gaining practical skills in content, social media, and analytics.",
+    "projects": []
+  },
+  {
+    "worktitle": "Steering Group Member",
+    "workplace": "Rauhankasvatusinstituutti – The Peace Education Institute",
+    "duration": "Dec 2023 – Sep 2024 · 10 mos",
+    "location": "Helsinki, Uusimaa, Finland",
+    "description": "Organised peace-education workshops and launched Nordic youth network, leading content creation and partnerships against hate speech.",
+    "projects": [
+      {
+        "projectname": "Nordic Youth Network Against Hate Speech",
+        "projectdescription": "Builds cross-Nordic collaboration, manages workshops, study visits, Instagram presence, and youth engagement to counter hate speech."
+      }
+    ]
+  },
+  {
+    "worktitle": "Project Coordinator",
+    "workplace": "Rauhankasvatusinstituutti – The Peace Education Institute",
+    "duration": "Nov 2023 – Jul 2024 · 9 mos",
+    "location": "Finland (Hybrid)",
+    "description": "Led intergenerational dialogue initiative, collecting letters and hosting events to bridge generational gaps through storytelling.",
+    "projects": [
+      {
+        "projectname": "Letters from the Generations",
+        "projectdescription": "Crowdsources letters, photos, and interviews to spark dialogue and empathy between age groups."
+      }
+    ]
+  },
+  {
+    "worktitle": "Engaged Attendee – NewGen Peace Working Training",
+    "workplace": "NewGen Peace Program",
+    "duration": "Jan 2023 – Dec 2023 · 1 yr",
+    "location": "Helsinki, Uusimaa, Finland",
+    "description": "Joined Europe-wide peace workshops, co-creating projects and securing funding for youth peacebuilding efforts.",
+    "projects": [
+      {
+        "projectname": "Letters from Generations",
+        "projectdescription": "Collaborated on funded peacebuilding project enhancing intergenerational understanding."
+      }
+    ]
+  },
+  {
+    "worktitle": "Social Media Team Member",
+    "workplace": "Women4Cyber Finland",
+    "duration": "Jan 2024 – Aug 2024 · 8 mos",
+    "location": "Finland (Remote)",
+    "description": "Produced social content and coordinated job-seeking campaign, linking experts with aspiring cybersecurity professionals.",
+    "projects": [
+      {
+        "projectname": "Cybersecurity Job-Seeking Campaign",
+        "projectdescription": "Collected industry advice and increased social-media engagement to support entry-level job seekers."
+      }
+    ]
+  },
+  {
+    "worktitle": "International Affairs Coordinator",
+    "workplace": "UN Youth of Finland",
+    "duration": "Jan 2023 – Dec 2023 · 1 yr",
+    "location": "Hybrid",
+    "description": "Organized No Hate Speech event, Vienna study visit, and partnerships, expanding youth engagement in international policy.",
+    "projects": [
+      {
+        "projectname": "No Hate Speech Event & Vienna Study Visit",
+        "projectdescription": "Coordinated event and excursion connecting youth with key international organizations and anti-hate partners."
+      }
+    ]
+  },
+  {
+    "worktitle": "Communication Coordinator",
+    "workplace": "UN Youth of Finland",
+    "duration": "Jan 2022 – Dec 2022 · 1 yr",
+    "location": "Helsinki, Uusimaa, Finland",
+    "description": "Managed social-media campaigns and partnerships, raising awareness of UN goals and peace initiatives among Finnish youth.",
+    "projects": [
+      {
+        "projectname": "Youth Peace Week Campaign",
+        "projectdescription": "Designed Instagram feeds and activities with UN Association of Finland to promote SDGs and peace."
+      }
+    ]
+  },
+  {
+    "worktitle": "Data Analyst & Workshop Coordinator",
+    "workplace": "Symbiosis Tampere",
+    "duration": "Nov 2022 – Jan 2023 · 3 mos",
+    "location": "Tampere, Pirkanmaa, Finland",
+    "description": "Analyzed employability data and organized workshops to support international students’ transition into Tampere’s job market.",
+    "projects": [
+      {
+        "projectname": "International Employability Landscape",
+        "projectdescription": "Surveyed students, produced analytical reports, and facilitated knowledge-sharing workshops."
+      }
+    ]
+  },
+  {
+    "worktitle": "Event Coordinator",
+    "workplace": "Clean Air Project (Social Change Nest Impact)",
+    "duration": "Sep 2022 – Nov 2022 · 3 mos",
+    "location": "—",
+    "description": "Led Clean Air Project events, handling administration, team leadership, and content creation for workshops.",
+    "projects": [
+      {
+        "projectname": "Clean Air Project",
+        "projectdescription": "Coordinated campaign funded by Social Change Nest Impact to raise air-quality awareness."
+      }
+    ]
+  },
+  {
+    "worktitle": "Intern – International Education & Integration",
+    "workplace": "Tampere University",
+    "duration": "May 2022 – Oct 2022 · 6 mos",
+    "location": "Tampere, Pirkanmaa, Finland",
+    "description": "Supported Guidebook app, events, and employability project, improving services for international students.",
+    "projects": [
+      {
+        "projectname": "Guidebook App Content Coordination",
+        "projectdescription": "Curated content and managed tutor communications for international-student guide."
+      },
+      {
+        "projectname": "Study & Stay Employability Project",
+        "projectdescription": "Collaborated with International Tampere House to enhance student employability initiatives."
+      }
+    ]
+  }
+]

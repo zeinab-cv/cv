@@ -90,28 +90,18 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 <span>Education</span>
               </h3>
               <div className="space-y-4">
-                {[
-                  {
-                    degree: "M.Sc. in Peace, Mediation and Conflict Research",
-                    institution: "University",
-                    years: "2022-2023"
-                  },
-                  {
-                    degree: "M.A. in Social Development", 
-                    institution: "University",
-                    years: "2020-2022"
-                  },
-                  {
-                    degree: "B.A. in Anthropology",
-                    institution: "University", 
-                    years: "2016-2020"
-                  }
-                ].map((edu) => (
-                  <div key={edu.degree} className="border-l-2 border-pink-400/30 pl-4">
-                    <h4 className="font-semibold text-white">{edu.degree}</h4>
-                    <p className="text-white/70 text-sm">{edu.institution} • {edu.years}</p>
-                  </div>
-                ))}
+                <div className="border-l-2 border-pink-400/30 pl-4">
+                  <h4 className="font-semibold text-white">M.Sc. in Peace, Mediation and Conflict Research</h4>
+                  <p className="text-white/70 text-sm">University • 2022-2023</p>
+                </div>
+                <div className="border-l-2 border-pink-400/30 pl-4">
+                  <h4 className="font-semibold text-white">M.A. in Social Development</h4>
+                  <p className="text-white/70 text-sm">University • 2020-2022</p>
+                </div>
+                <div className="border-l-2 border-pink-400/30 pl-4">
+                  <h4 className="font-semibold text-white">B.A. in Anthropology</h4>
+                  <p className="text-white/70 text-sm">University • 2016-2020</p>
+                </div>
               </div>
             </div>
             
