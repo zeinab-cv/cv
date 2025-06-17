@@ -284,7 +284,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
             
             {/* Topics i have worked with */}
             <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
-              <h3 className="text-xl font-semibold text-white mb-4">Topics i have worked with</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Areas of Expertise</h3>
               <div className="flex flex-wrap gap-2">
                 {topicsWorkedWith.map((topic) => (
                   <span 

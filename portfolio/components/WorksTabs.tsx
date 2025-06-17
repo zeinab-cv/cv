@@ -169,23 +169,16 @@ export default function WorksTabs() {
               },
               {
                 "worktitle": "Project Officer",
-                "duration": "Nov 2023 – Present · 1 yr 8 mos",
-                "description": "Facilitates youth communication and digital-literacy activities, supporting cross-cultural storytelling and project planning.",
-                "projects": [
-                  {
-                    "projectname": "Digital Storytelling for Active Citizenship",
-                    "projectdescription": "Connects German and Finnish youth to craft migration narratives, combat misinformation, and strengthen media skills."
-                  }
-                ]
-              },
-              {
-                "worktitle": "Project Officer",
                 "duration": "Jan 2023 – Present · 2 yrs 6 mos",
                 "description": "Empowers marginalized youth to publish multilingual media and Magazine Y, coordinating workshops, video production, and partnerships.",
                 "projects": [
                   {
                     "projectname": "Youth in Focus – Multilingual Youth Media Project",
                     "projectdescription": "Guides youth in storytelling on global issues, supports Magazine Y publication, and fosters inclusive society."
+                  },
+                  {
+                    "projectname": "Digital Storytelling for Active Citizenship",
+                    "projectdescription": "Connects German and Finnish youth to craft migration narratives, combat misinformation, and strengthen media skills."
                   }
                 ]
               }
@@ -206,17 +199,7 @@ export default function WorksTabs() {
                   }
                 ]
               },
-              {
-                "worktitle": "Project Coordinator",
-                "duration": "Nov 2023 – Jul 2024 · 9 mos",
-                "description": "Led intergenerational dialogue initiative, collecting letters and hosting events to bridge generational gaps through storytelling.",
-                "projects": [
-                  {
-                    "projectname": "Letters from the Generations",
-                    "projectdescription": "Crowdsources letters, photos, and interviews to spark dialogue and empathy between age groups."
-                  }
-                ]
-              }
+              
             ]
           },
           {
@@ -277,23 +260,6 @@ export default function WorksTabs() {
             ]
           },
           {
-            "organization": "NewGen Peace Program",
-            "location": "Helsinki, Uusimaa, Finland",
-            "positions": [
-              {
-                "worktitle": "Engaged Attendee – NewGen Peace Working Training",
-                "duration": "Jan 2023 – Dec 2023 · 1 yr",
-                "description": "Joined Europe-wide peace workshops, co-creating projects and securing funding for youth peacebuilding efforts.",
-                "projects": [
-                  {
-                    "projectname": "Letters from Generations",
-                    "projectdescription": "Collaborated on funded peacebuilding project enhancing intergenerational understanding."
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "organization": "Symbiosis Tampere",
             "location": "Tampere, Pirkanmaa, Finland",
             "positions": [
@@ -305,20 +271,7 @@ export default function WorksTabs() {
                   {
                     "projectname": "International Employability Landscape",
                     "projectdescription": "Surveyed students, produced analytical reports, and facilitated knowledge-sharing workshops."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "organization": "Clean Air Project (Social Change Nest Impact)",
-            "location": "Various",
-            "positions": [
-              {
-                "worktitle": "Event Coordinator",
-                "duration": "Sep 2022 – Nov 2022 · 3 mos",
-                "description": "Led Clean Air Project events, handling administration, team leadership, and content creation for workshops.",
-                "projects": [
+                  },
                   {
                     "projectname": "Clean Air Project",
                     "projectdescription": "Coordinated campaign funded by Social Change Nest Impact to raise air-quality awareness."
@@ -355,7 +308,7 @@ export default function WorksTabs() {
             {workExperienceByOrganization.map((org, orgIndex) => (
               <div key={orgIndex} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
                 <div className="flex items-start space-x-3 mb-6">
-                  <IconBriefcase size={24} className="text-purple-400 mt-1" />
+                  <IconBriefcase size={24} className="text-blue-600 mt-1" />
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-1">{org.organization}</h3>
                     <p className="text-white/60 text-sm mb-4">{org.location}</p>
@@ -363,9 +316,9 @@ export default function WorksTabs() {
                     {/* Multiple positions within the organization */}
                     <div className="space-y-6">
                       {org.positions.map((position, positionIndex) => (
-                        <div key={positionIndex} className="border-l-2 border-purple-400/30 pl-4">
+                        <div key={positionIndex} className="border-l-2 border-blue-700/30 pl-4">
                           <h4 className="text-lg font-semibold text-white mb-1">{position.worktitle}</h4>
-                          <p className="text-purple-400 text-sm mb-1">{position.duration}</p>
+                          <p className="text-blue-700 text-sm mb-1">{position.duration}</p>
                           <p className="text-white/70 text-sm mb-4">{position.description}</p>
                           
                           {position.projects && position.projects.length > 0 && (
@@ -373,7 +326,7 @@ export default function WorksTabs() {
                               <h5 className="text-base font-medium text-white">Key Projects:</h5>
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 {position.projects.map((project, projectIndex) => (
-                                  <div key={projectIndex} className="border-l-2 border-purple-400/20 pl-4 hover:bg-white/5 p-3 rounded-r-xl transition-all duration-300">
+                                  <div key={projectIndex} className="border-l-2 border-blue-700/20 pl-4 hover:bg-white/5 p-3 rounded-r-xl transition-all duration-300">
                                     <h6 className="font-medium text-white/90 mb-1">{project.projectname}</h6>
                                     <p className="text-white/60 text-sm">{project.projectdescription}</p>
                                   </div>
