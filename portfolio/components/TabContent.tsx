@@ -90,18 +90,28 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 <span>Education</span>
               </h3>
               <div className="space-y-4">
-                <div className="border-l-2 border-pink-400/30 pl-4">
-                  <h4 className="font-semibold text-white">M.Sc. in Peace, Mediation and Conflict Research</h4>
-                  <p className="text-white/70 text-sm">University • 2022-2023</p>
-                </div>
-                <div className="border-l-2 border-pink-400/30 pl-4">
-                  <h4 className="font-semibold text-white">M.A. in Social Development</h4>
-                  <p className="text-white/70 text-sm">University • 2020-2022</p>
-                </div>
-                <div className="border-l-2 border-pink-400/30 pl-4">
-                  <h4 className="font-semibold text-white">B.A. in Anthropology</h4>
-                  <p className="text-white/70 text-sm">University • 2016-2020</p>
-                </div>
+                {[
+                  {
+                    degree: "M.Sc. in Peace, Mediation and Conflict Research",
+                    institution: "University",
+                    years: "2022-2023"
+                  },
+                  {
+                    degree: "M.A. in Social Development", 
+                    institution: "University",
+                    years: "2020-2022"
+                  },
+                  {
+                    degree: "B.A. in Anthropology",
+                    institution: "University", 
+                    years: "2016-2020"
+                  }
+                ].map((edu) => (
+                  <div key={edu.degree} className="border-l-2 border-pink-400/30 pl-4">
+                    <h4 className="font-semibold text-white">{edu.degree}</h4>
+                    <p className="text-white/70 text-sm">{edu.institution} • {edu.years}</p>
+                  </div>
+                ))}
               </div>
             </div>
             
@@ -113,92 +123,117 @@ export default function TabContent({ activeTab }: TabContentProps) {
               </h3>
               
               <div className="space-y-6">
-                {/* Digital Marketing & Social Media */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-3 text-center bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
-                    Digital Marketing & Social Media
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Digital Marketing Growth Programme 2024</h5>
-                      <p className="text-white/60 text-xs">August 2024</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Social Media Marketing</h5>
-                      <p className="text-white/60 text-xs">HubSpot Academy • August 2024</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Fundamentals of Digital Marketing</h5>
-                      <p className="text-white/60 text-xs">Google Digital Garage • July 2024</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Semrush SEO Crash Course</h5>
-                      <p className="text-white/60 text-xs">Brian Dean • July 2024</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Introduction to Marketing</h5>
-                      <p className="text-white/60 text-xs">edX Verified Certificate • March 2024</p>
+                {[
+                  {
+                    category: "Digital Marketing & Social Media",
+                    gradient: "from-pink-400 to-purple-500",
+                    certificates: [
+                      {
+                        name: "Digital Marketing Growth Programme 2024",
+                        issuer: "",
+                        date: "August 2024"
+                      },
+                      {
+                        name: "Social Media Marketing",
+                        issuer: "HubSpot Academy",
+                        date: "August 2024"
+                      },
+                      {
+                        name: "Fundamentals of Digital Marketing",
+                        issuer: "Google Digital Garage",
+                        date: "July 2024"
+                      },
+                      {
+                        name: "Semrush SEO Crash Course",
+                        issuer: "Brian Dean",
+                        date: "July 2024"
+                      },
+                      {
+                        name: "Introduction to Marketing",
+                        issuer: "edX Verified Certificate",
+                        date: "March 2024"
+                      }
+                    ]
+                  },
+                  {
+                    category: "IT & Technical Skills",
+                    gradient: "from-blue-400 to-cyan-500",
+                    certificates: [
+                      {
+                        name: "Google IT Support Specialization",
+                        issuer: "",
+                        date: "December 2023"
+                      },
+                      {
+                        name: "IT Security: Defense Against Digital Dark Arts",
+                        issuer: "Google",
+                        date: "December 2023"
+                      },
+                      {
+                        name: "System Administration & IT Infrastructure",
+                        issuer: "Google",
+                        date: "December 2023"
+                      },
+                      {
+                        name: "Operating Systems: Becoming a Power User",
+                        issuer: "Google",
+                        date: "November 2023"
+                      },
+                      {
+                        name: "Computer Networking",
+                        issuer: "Google",
+                        date: "October 2023"
+                      },
+                      {
+                        name: "Technical Support Fundamentals",
+                        issuer: "Coursera",
+                        date: "September 2023"
+                      }
+                    ]
+                  },
+                  {
+                    category: "Professional Development & Other",
+                    gradient: "from-green-400 to-teal-500",
+                    certificates: [
+                      {
+                        name: "Green Digital Skills Certificate",
+                        issuer: "INCO Academy",
+                        date: "February 2024"
+                      },
+                      {
+                        name: "Dynamic Group Facilitation Skills",
+                        issuer: "Udemy",
+                        date: "July 2023"
+                      },
+                      {
+                        name: "Future Analyst & Co-creator",
+                        issuer: "Demola Global",
+                        date: "October 2021"
+                      },
+                      {
+                        name: "English Course - Headway Upper Intermediate",
+                        issuer: "",
+                        date: "August 2019"
+                      }
+                    ]
+                  }
+                ].map((section) => (
+                  <div key={section.category}>
+                    <h4 className={`text-lg font-semibold text-white mb-3 text-center bg-gradient-to-r ${section.gradient} bg-clip-text text-transparent`}>
+                      {section.category}
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {section.certificates.map((cert) => (
+                        <div key={cert.name} className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                          <h5 className="font-medium text-white text-sm">{cert.name}</h5>
+                          <p className="text-white/60 text-xs">
+                            {cert.issuer && `${cert.issuer} • `}{cert.date}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                </div>
-
-                {/* IT & Technical Skills */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-3 text-center bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                    IT & Technical Skills
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Google IT Support Specialization</h5>
-                      <p className="text-white/60 text-xs">December 2023</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">IT Security: Defense Against Digital Dark Arts</h5>
-                      <p className="text-white/60 text-xs">Google • December 2023</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">System Administration & IT Infrastructure</h5>
-                      <p className="text-white/60 text-xs">Google • December 2023</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Operating Systems: Becoming a Power User</h5>
-                      <p className="text-white/60 text-xs">Google • November 2023</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Computer Networking</h5>
-                      <p className="text-white/60 text-xs">Google • October 2023</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Technical Support Fundamentals</h5>
-                      <p className="text-white/60 text-xs">Coursera • September 2023</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Professional Development & Other */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-3 text-center bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
-                    Professional Development & Other
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Green Digital Skills Certificate</h5>
-                      <p className="text-white/60 text-xs">INCO Academy • February 2024</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Dynamic Group Facilitation Skills</h5>
-                      <p className="text-white/60 text-xs">Udemy • July 2023</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">Future Analyst & Co-creator</h5>
-                      <p className="text-white/60 text-xs">Demola Global • October 2021</p>
-                    </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <h5 className="font-medium text-white text-sm">English Course - Headway Upper Intermediate</h5>
-                      <p className="text-white/60 text-xs">August 2019</p>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
