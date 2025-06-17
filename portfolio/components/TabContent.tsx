@@ -61,24 +61,13 @@ export default function TabContent({ activeTab }: TabContentProps) {
           <div className="space-y-6">
             <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
               <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
-                Oh Hey There! 👋
+              Your past plants the seeds, but your curiosity lets you bloom
               </h1>
-              <p className="text-xl text-white/80 mb-8 drop-shadow-sm">
-                &ldquo;Hey! Fair warning - you might find some awesome stuff and terrible dad jokes in here 😄&rdquo;
-              </p>
               
             </div>
             <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
-              <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
-                Welcome to My Portfolio
-              </h1>
-              <p className="text-xl text-white/80 mb-8 drop-shadow-sm">
-                &ldquo;Your past plants the seeds, but your curiosity lets you bloom&rdquo;
-              </p>
               <p className="text-white/70 leading-relaxed">
-                I bring a unique blend of academic expertise and practical experience in project coordination, 
-                social development, and multicultural engagement. My passion for digital marketing and creative 
-                solutions drives me to contribute meaningfully to every team I work with.
+              I’m a project coordinator with a background in anthropology, social development, and peace studies. I work at the intersection of youth engagement, community development, and digital communication, with a passion for inclusive projects, dialogue, and creative collaboration.
               </p>
             </div>
           </div>
@@ -109,26 +98,6 @@ export default function TabContent({ activeTab }: TabContentProps) {
               </div>
             </div>
             
-            {/* Experience Section */}
-            <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
-              <h3 className="text-xl font-semibold text-white mb-4 flex items-center space-x-2">
-                <IconBriefcase size={24} />
-                <span>Experience</span>
-              </h3>
-              <div className="space-y-4">
-                <div className="border-l-2 border-purple-400/30 pl-4">
-                  <h4 className="font-semibold text-white">Project Coordinator</h4>
-                  <p className="text-purple-400 text-sm">Osuuskunta 3E • Jan 2023 - Present</p>
-                  <p className="text-white/70 text-sm mt-2">Leading role in planning, monitoring and reporting national and international projects.</p>
-                </div>
-                <div className="border-l-2 border-purple-400/30 pl-4">
-                  <h4 className="font-semibold text-white">Social Media & Marketing Team</h4>
-                  <p className="text-purple-400 text-sm">Nordic Inclusify ry • Aug 2024 - Present</p>
-                  <p className="text-white/70 text-sm mt-2">Managed social media channels, creating engaging content, developing marketing strategy.</p>
-                </div>
-              </div>
-            </div>
-
             {/* Certificates Section */}
             <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
               <h3 className="text-xl font-semibold text-white mb-6 flex items-center space-x-2">
