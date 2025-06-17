@@ -12,8 +12,8 @@ export default function Sidebar() {
   const theme = getThemeClasses();
   
   const knowledges = [
-    'Digital Marketing', 'Content Creation', 'WordPress', 'Canva',
-    'Microsoft Office', 'Video Editing', 'Community Engagement', 'Multicultural Teams'
+    'Digital Marketing', 'Content Creation',
+    'Community Engagement', 'Multicultural Teams', 'Project Coordination'
   ];
   
   return (

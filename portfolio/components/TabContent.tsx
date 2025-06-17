@@ -32,6 +32,12 @@ export default function TabContent({ activeTab }: TabContentProps) {
     'Safe Space principals', 'Media Literacy'
   ];
 
+  const toolsWorkedWith = [
+    'Canva', 'WordPress', 'Microsoft Office Suite', 'Adobe Premiere Pro',
+    'Google Workspace', 'Zoom', 'Slack', 'Trello',
+    'Mailchimp', 'Hootsuite', 'Asana', 'Survey Monkey'
+  ];
+
   const languages = [
     { name: 'English', level: 5 },
     { name: 'Persian', level: 5 },
@@ -256,6 +262,19 @@ export default function TabContent({ activeTab }: TabContentProps) {
               <h3 className="text-xl font-semibold text-white mb-4">Topics i have worked with</h3>
               <div className="flex flex-wrap gap-2">
                 {topicsWorkedWith.map((topic) => (
+                  <span 
+                    key={topic}
+                    className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
+                  >
+                    {topic}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
+              <h3 className="text-xl font-semibold text-white mb-4">Tools I use</h3>
+              <div className="flex flex-wrap gap-2">
+                {toolsWorkedWith.map((topic) => (
                   <span 
                     key={topic}
                     className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"

@@ -16,8 +16,8 @@ export default function WorksTabs() {
 
   const tabs = [
     { id: 'projects', label: 'Experience', icon: IconPalette },
-    { id: 'events', label: 'Events i have organized', icon: IconCalendarEvent },
-    { id: 'organizations', label: 'Organizations i have involved with', icon: IconUsers }
+    { id: 'events', label: 'Organizations i have involved with', icon: IconCalendarEvent },
+    { id: 'organizations', label: 'Events i have organized', icon: IconUsers }
   ];
 
   const organizationsData = [
@@ -29,45 +29,108 @@ export default function WorksTabs() {
       projects: [
         {
           title: "Speaker Corner: Youth & Online Violence Dialogue Series",
+          organization: "Osuuskunta 3E",
           location: "Tampere & Vaasa, Finland",
-          year: "2024",
+          year: 2024,
           about: "A series of open discussions exploring the impact of online violence on young people, featuring youth speakers, community voices, and NGO partners."
         },
         {
           title: "Vendor Training Lab for Magazine Y",
+          organization: "Osuuskunta 3E",
           location: "Vaasa Region",
-          year: "2024",
+          year: 2024,
           about: "Designed and facilitated training sessions for youth vendors on communication, pitching, and customer engagement for a multilingual street magazine."
         },
         {
           title: "Youth Media Workshop: Migration Narratives & Digital Literacy",
-          location: "",
-          year: "2024",
+          organization: "Osuuskunta 3E",
+          year: 2024,
           about: "Co-organized workshops connecting youth in Finland and Germany to explore digital storytelling and tackle misinformation through cross-cultural exchange."
         },
         {
           title: "Youth in Focus: Journalism & Storytelling for Social Impact",
-          location: "",
+          organization: "Osuuskunta 3E",
           year: "2023–2024",
           about: "Coordinated inclusive journalism workshops and supported youth in content creation for Magazine Y, aligned with the UN Sustainable Development Goals."
         },
         {
           title: "Community Collaboration Events (Närpes & Oravainen)",
-          location: "",
-          year: "2023",
+          organization: "Osuuskunta 3E",
+          year: 2023,
           about: "Co-created local events and outreach sessions with Café Albert and Stella Reception Centre to build cross-cultural connection and promote youth media."
         }
       ]
     },
     {
-      name: "Nordic Inclusify ry",
-      role: "Social Media & Marketing Team",
-      icon: IconUsers,
-      color: "pink",
-      projects: [],
-      description: "Social Media & Marketing Team member, developing inclusive marketing strategies and content for promoting diversity and inclusion across Nordic communities."
-    }
+      name: "The Peace Education Institute (Rauhankasvatusinstituutti)",
+      role: "Workshop Facilitator",
+      icon: IconBuildingCommunity,
+      color: "blue",
+      projects: [
+        {
+          title: "Anti-Hate Speech & Peace Education Workshops Across the Nordics",
+          organization: "The Peace Education Institute (Rauhankasvatusinstituutti)",
+          year: 2024,
+          about: "Designed and facilitated workshops on peace education and dialogue as part of the Nordic Youth Network Against Hate Speech (funded by Norden 0–30). Included participant recruitment for study visits to Iceland and Utøya, Norway."
+        }
+      ]
+    },
+    {
+      name: "UN Youth of Finland",
+      role: "Workshop Leader",
+      icon: IconBuildingCommunity,
+      color: "green",
+      projects: [
+        {
+          title: "No Hate Speech: Youth Dialogue & Workshop Series",
+          organization: "UN Youth of Finland",
+          year: 2023,
+          about: "Led workshops addressing hate speech using empathy mapping and backcasting tools. Partnered with Norway’s Stopp Hatprat and coordinated a study visit to Vienna to engage with international peace institutions, including the UN, OSCE, and EU Delegation."
+        },
+        {
+          title: "World Village Festival – Youth Advocacy for SDGs",
+          organization: "UN Youth of Finland (with UN Association of Finland)",
+          year: 2022,
+          about: "Contributed to organizing and coordinating UN Youth’s presence at World Village Festival in Helsinki. Engaged the public in discussions around sustainable development, peace, and youth empowerment."
+        }
+      ]
+    },
+    {
+      name: "Symbiosis Tampere",
+      role: "Event Coordinator",
+      icon: IconBuildingCommunity,
+      color: "orange",
+      projects: [
+        {
+          title: "Clean Air Project – Community Engagement Event",
+          organization: "Symbiosis Tampere",
+          year: 2022,
+          about: "Coordinated a multi-part event promoting clean air awareness and environmental responsibility, funded by Social Change Nest Impact. Managed logistics, led execution, and developed content for outreach and workshops."
+        },
+        {
+          title: "Employability Pathways for International Students",
+          organization: "Symbiosis Tampere",
+          year: "2022–2023",
+          about: "Co-organized stakeholder workshops as part of the International Employability Landscape project. Brought together university and master’s program staff to discuss improving job market access for international students in Tampere."
+        }
+      ]
+    },
+    {
+      name: "Tampere University",
+      role: "Event Organizer",
+      icon: IconBuildingCommunity,
+      color: "purple",
+      projects: [
+        {
+          title: "Welcome Week & Study & Stay Showcase",
+          organization: "Tampere University",
+          year: 2022,
+          about: "Organized and represented key university initiatives for international students during Welcome Week. Managed event stands, created digital content, coordinated Guidebook app updates, and facilitated peer engagement through tutoring meetups and storytelling sessions. Participated in the “Study & Stay” employability project and provided strategic feedback from an international student perspective."
+        }
+      ]
+    },
   ];
+  
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -132,8 +195,16 @@ export default function WorksTabs() {
           <div className="space-y-6">
             {organizationsData.map((org, index) => {
               const IconComponent = org.icon;
-              const colorClass = org.color === 'indigo' ? 'text-indigo-400' : 'text-pink-400';
-              const borderClass = org.color === 'indigo' ? 'border-indigo-400/30' : 'border-pink-400/30';
+              const colorClass = org.color === 'indigo' ? 'text-indigo-400' : 
+                                 org.color === 'blue' ? 'text-blue-400' :
+                                 org.color === 'green' ? 'text-green-400' :
+                                 org.color === 'orange' ? 'text-orange-400' :
+                                 org.color === 'purple' ? 'text-purple-400' : 'text-pink-400';
+              const borderClass = org.color === 'indigo' ? 'border-indigo-400/30' : 
+                                  org.color === 'blue' ? 'border-blue-400/30' :
+                                  org.color === 'green' ? 'border-green-400/30' :
+                                  org.color === 'orange' ? 'border-orange-400/30' :
+                                  org.color === 'purple' ? 'border-purple-400/30' : 'border-pink-400/30';
               
               return (
                 <div key={index} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
@@ -143,8 +214,8 @@ export default function WorksTabs() {
                     <span className={`${colorClass} text-sm`}>{org.role}</span>
                   </div>
                   
-                  {org.projects && org.projects.length > 0 ? (
-                    <div className="space-y-4">
+                  {org.projects && org.projects.length > 0 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {org.projects.map((project, projectIndex) => (
                         <div key={projectIndex} className={`border-l-2 ${borderClass} pl-4 hover:bg-white/5 p-3 rounded-r-xl transition-all duration-300`}>
                           <h4 className="font-semibold text-white mb-1">{project.title}</h4>
@@ -155,8 +226,6 @@ export default function WorksTabs() {
                         </div>
                       ))}
                     </div>
-                  ) : (
-                    <p className="text-white/70 pl-4">{org.description}</p>
                   )}
                 </div>
               );
