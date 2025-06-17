@@ -160,33 +160,93 @@ export default function WorksTabs() {
         );
 
       case 'events':
+        const additionalOrganizations = [
+          {
+            "name": "Osuuskunta 3E",
+            "description": "Cooperative promoting sustainable entrepreneurship and education",
+            "website": "https://www.cooperative3e.com/",
+            "color": "emerald"
+          },
+          {
+            "name": "Rauhankasvatusinstituutti", 
+            "description": "Institute focused on peace education and justice",
+            "website": "https://rauhankasvatus.fi/",
+            "color": "blue"
+          },
+          {
+            "name": "Symbiosis Tampere",
+            "description": "Supports multiculturalism and immigrant integration",
+            "website": "https://www.linkedin.com/company/symbiosistampere/?originalSubdomain=fi",
+            "color": "teal"
+          },
+          {
+            "name": "Tampere University",
+            "description": "Public university offering research and higher education",
+            "website": "https://www.tuni.fi/",
+            "color": "purple"
+          },
+          {
+            "name": "Women 4 Cyber",
+            "description": "Promotes women's roles in cybersecurity field",
+            "website": "https://www.women4cyberfinland.com/",
+            "color": "pink"
+          },
+          {
+            "name": "FiNGO",
+            "description": "Umbrella group for Finnish development NGOs",
+            "website": "https://www.fingo.fi/",
+            "color": "cyan"
+          },
+          {
+            "name": "UN Youth of Finland",
+            "description": "Engages youth in UN-related activities",
+            "website": "https://yknuoret.fi/en/",
+            "color": "blue"
+          },
+          {
+            "name": "Nordic Inclusify ry",
+            "description": "Advances diversity and inclusion in society",
+            "website": "https://www.linkedin.com/company/nordic-inclusify/?originalSubdomain=fi",
+            "color": "teal"
+          },
+          {
+            "name": "International House Tampere",
+            "description": "Helps internationals settle and find services",
+            "website": "https://internationalhouse.tampere.fi/",
+            "color": "emerald"
+          }
+        ]
+        ;
+
         return (
-          <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
-            <div className="min-h-[400px] grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
-                <div className="w-full h-32 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <IconCalendarEvent size={48} className="text-purple-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Community Workshops</h3>
-                <p className="text-white/70 text-sm">Organized and facilitated workshops on active citizenship and community engagement.</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {additionalOrganizations.map((org, index) => {
+              const colorClass = org.color === 'pink' ? 'text-pink-400' :
+                                 org.color === 'cyan' ? 'text-cyan-400' :
+                                 org.color === 'teal' ? 'text-teal-400' :
+                                 org.color === 'emerald' ? 'text-emerald-400' : 'text-blue-400';
               
-              <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
-                <div className="w-full h-32 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <IconBuildingCommunity size={48} className="text-blue-400" />
+              return (
+                <div key={index} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <IconBuildingCommunity size={24} className={colorClass} />
+                    <h3 className="text-xl font-semibold text-white">{org.name}</h3>
+                  </div>
+                  
+                  <div className="pl-4">
+                    <p className="text-white/70 text-sm mb-3">{org.description}</p>
+                    <a 
+                      href={org.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`${colorClass} text-sm hover:underline transition-colors duration-300`}
+                    >
+                      Visit Website →
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Cultural Events</h3>
-                <p className="text-white/70 text-sm">Hosted multicultural events promoting dialogue and understanding between communities.</p>
-              </div>
-              
-              <div className="rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
-                <div className="w-full h-32 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-xl mb-4 flex items-center justify-center">
-                  <IconUsers size={48} className="text-green-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Networking Events</h3>
-                <p className="text-white/70 text-sm">Organized professional networking events connecting diverse professionals and organizations.</p>
-              </div>
-            </div>
+              );
+            })}
           </div>
         );
 
