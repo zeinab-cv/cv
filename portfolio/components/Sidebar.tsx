@@ -5,12 +5,16 @@ import {
   IconLink, 
   IconPhone, 
   IconMapPin, 
-  IconCalendar,
   IconDownload
 } from '@tabler/icons-react';
 
 export default function Sidebar() {
   const theme = getThemeClasses();
+  
+  const knowledges = [
+    'Digital Marketing', 'Content Creation', 'WordPress', 'Canva',
+    'Microsoft Office', 'Video Editing', 'Community Engagement', 'Multicultural Teams'
+  ];
   
   return (
     <div className="sticky top-8 h-fit mt">
@@ -49,6 +53,20 @@ export default function Sidebar() {
               <IconLink size={22} className="text-white" />
             </a>
           </div>
+          
+          {/* Knowledge & Tools */}
+          <div className="mb-6">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {knowledges.map((knowledge) => (
+                <span 
+                  key={knowledge}
+                  className="px-2 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
+                >
+                  {knowledge}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       
@@ -60,7 +78,7 @@ export default function Sidebar() {
         <div className="space-y-6 text-white relative z-10">
           <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
             <IconPhone size={24} className="text-white" />
-            <span className="text-base">+123 456 7890</span>
+            <span className="text-base">+358 468870598</span>
           </div>
           <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
             <IconMail size={24} className="text-white" />
@@ -68,12 +86,9 @@ export default function Sidebar() {
           </div>
           <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
             <IconMapPin size={24} className="text-white" />
-            <span className="text-base">Location</span>
+            <span className="text-base">Finland, Tampere</span>
           </div>
-          <div className="flex items-center space-x-4 hover:translate-x-2 transition-transform duration-300">
-            <IconCalendar size={24} className="text-white" />
-            <span className="text-base">May 27, 1990</span>
-          </div>
+          
         </div>
       </div>
       

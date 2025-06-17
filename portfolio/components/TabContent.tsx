@@ -26,9 +26,10 @@ export default function TabContent({ activeTab }: TabContentProps) {
     { name: 'Event Management', level: 80 }
   ];
   
-  const knowledges = [
-    'Digital Marketing', 'Content Creation', 'WordPress', 'Canva',
-    'Microsoft Office', 'Video Editing', 'Community Engagement', 'Multicultural Teams'
+  const topicsWorkedWith = [
+    'Sustainable Development', 'Peace Education', 'Youth Participation', 
+    'Diversity, Equity, Inclusion', 'Non-Formal learning', 'Future Thinking & Civic Imagination',
+    'Safe Space principals', 'Media Literacy'
   ];
 
   const languages = [
@@ -250,16 +251,16 @@ export default function TabContent({ activeTab }: TabContentProps) {
               </div>
             </div>
             
-            {/* Knowledge & Tools */}
+            {/* Topics i have worked with */}
             <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
-              <h3 className="text-xl font-semibold text-white mb-4">Knowledge & Tools</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Topics i have worked with</h3>
               <div className="flex flex-wrap gap-2">
-                {knowledges.map((knowledge) => (
+                {topicsWorkedWith.map((topic) => (
                   <span 
-                    key={knowledge}
+                    key={topic}
                     className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
                   >
-                    {knowledge}
+                    {topic}
                   </span>
                 ))}
               </div>
