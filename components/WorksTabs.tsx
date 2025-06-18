@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { getThemeClasses, theme } from '../lib/theme';
+import { getThemeClasses } from '../lib/theme';
 import { 
   IconPalette, 
   IconCalendarEvent,
