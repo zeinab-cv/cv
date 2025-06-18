@@ -3,8 +3,21 @@ export default function AnimatedBackground() {
     <>
       {/* Animated Gradient Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#6FB0F1] via-[#3B85ED] to-[#0076CC] animate-gradient"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 via-pink-500/20 to-blue-500/20 animate-gradient" style={{ animationDelay: '2s' }}></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#6FB0F1] via-[#3B85ED] to-[#0076CC] animate-gradient"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 via-pink-500/20 to-blue-500/20 animate-gradient" style={{ animationDelay: '2s' }}></div> */}
+
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1A5AAE] via-[#004C8C] to-[#00305C] animate-gradient"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-pink-900/20 to-blue-900/20 animate-gradient" style={{ animationDelay: '2s' }}></div>
+
+
+{/* darker version */}
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#3B85ED] via-[#0076CC] to-[#004C8C] animate-gradient"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-700/20 via-pink-700/20 to-blue-700/20 animate-gradient" style={{ animationDelay: '2s' }}></div> */}
+
+
+{/*         lighter version
+        <div className="absolute inset-0 bg-gradient-to-br from-[#A5D3FF] via-[#6FB0F1] to-[#3B85ED] animate-gradient"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-300/20 via-pink-300/20 to-blue-300/20 animate-gradient" style={{ animationDelay: '2s' }}></div> */}
       </div>
 
       {/* Floating Particles */}

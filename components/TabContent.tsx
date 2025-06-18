@@ -2,7 +2,6 @@ import { getThemeClasses } from '../lib/theme';
 import WorksTabs from './WorksTabs';
 import { 
   IconSchool, 
-  IconBriefcase, 
   IconBrain,
   IconWorld,
   IconMail, 

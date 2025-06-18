@@ -12,7 +12,7 @@ export default function Contact() {
         </p>
         <a
           href="mailto:zeyndanesh@gmail.com"
-          className={`${theme.secondaryButton} px-8 py-3 rounded-lg text-lg font-semibold transition-all ${theme.buttonShadow}`}
+          className={`${theme.secondaryButton} px-8 py-3 rounded-lg text-lg font-semibold transition-all`}
         >
           zeyndanesh@gmail.com
         </a>

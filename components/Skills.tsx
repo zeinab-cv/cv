@@ -1,7 +1,5 @@
-import { getThemeClasses } from '../lib/theme';
 
 export default function Skills() {
-  const theme = getThemeClasses();
   
   const workingSkills = [
     { name: 'Project Coordination', level: 90 },
