@@ -121,6 +121,23 @@
   }
 }
 
+@layer utilities {
+  /* Increase all text sizes by 10px */
+  .text-xs { font-size: calc(0.75rem + 4px) !important; }
+  .text-sm { font-size: calc(0.875rem + 4px) !important; }
+  .text-base { font-size: calc(1rem + 4px) !important; }
+  .text-lg { font-size: calc(1.125rem + 4px) !important; }
+  .text-xl { font-size: calc(1.25rem + 4px) !important; }
+  .text-2xl { font-size: calc(1.5rem + 4px) !important; }
+  .text-3xl { font-size: calc(1.875rem + 4px) !important; }
+  .text-4xl { font-size: calc(2.25rem + 4px) !important; }
+  .text-5xl { font-size: calc(3rem + 4px) !important; }
+  .text-6xl { font-size: calc(3.75rem + 4px) !important; }
+  .text-7xl { font-size: calc(4.5rem + 4px) !important; }
+  .text-8xl { font-size: calc(6rem + 4px) !important; }
+  .text-9xl { font-size: calc(8rem + 4px) !important; }
+}
+
 /* Animated Background Effects */
 @keyframes gradientShift {
   0%, 100% {

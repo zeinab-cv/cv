@@ -17,7 +17,7 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
   
   const tabs = [
     { id: 'home', label: 'Home', icon: IconHome },
-    { id: 'resume', label: 'Resume', icon: IconFileText },
+    { id: 'resume', label: 'Education', icon: IconFileText },
     { id: 'works', label: 'Works', icon: IconBriefcase },
     { id: 'skills', label: 'Skills', icon: IconBrain },
     { id: 'contact', label: 'Contact', icon: IconPhone }

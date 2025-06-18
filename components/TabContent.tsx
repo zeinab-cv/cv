@@ -111,8 +111,34 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 <span>Certificates & Professional Development</span>
               </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-12">
                 {[
+                  {
+                    category: "Professional Development & Other",
+                    gradient: "from-green-400 to-teal-500",
+                    certificates: [
+                      {
+                        name: "Green Digital Skills Certificate",
+                        issuer: "INCO Academy",
+                        date: "February 2024"
+                      },
+                      {
+                        name: "Dynamic Group Facilitation Skills",
+                        issuer: "Udemy",
+                        date: "July 2023"
+                      },
+                      {
+                        name: "Future Analyst & Co-creator",
+                        issuer: "Demola Global",
+                        date: "October 2021"
+                      },
+                      {
+                        name: "Youthpass - Journey into Small-scale Partnerships",
+                        issuer: "Las Niñas del Tul",
+                        date: "March 2025"
+                      }
+                    ]
+                  },
                   {
                     category: "Digital Marketing & Social Media",
                     gradient: "from-pink-400 to-purple-500",
@@ -179,33 +205,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
                         date: "September 2023"
                       }
                     ]
-                  },
-                  {
-                    category: "Professional Development & Other",
-                    gradient: "from-green-400 to-teal-500",
-                    certificates: [
-                      {
-                        name: "Green Digital Skills Certificate",
-                        issuer: "INCO Academy",
-                        date: "February 2024"
-                      },
-                      {
-                        name: "Dynamic Group Facilitation Skills",
-                        issuer: "Udemy",
-                        date: "July 2023"
-                      },
-                      {
-                        name: "Future Analyst & Co-creator",
-                        issuer: "Demola Global",
-                        date: "October 2021"
-                      },
-                      {
-                        name: "English Course - Headway Upper Intermediate",
-                        issuer: "",
-                        date: "August 2019"
-                      }
-                    ]
                   }
+                  
                 ].map((section) => (
                   <div key={section.category}>
                     <h4 className={`text-lg font-semibold text-white mb-3 text-center bg-gradient-to-r ${section.gradient} bg-clip-text text-transparent`}>
