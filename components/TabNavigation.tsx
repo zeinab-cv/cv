@@ -35,14 +35,14 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
               className={`
                 flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-300 relative overflow-hidden group
                 ${activeTab === tab.id 
-                  ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg' 
+                  ? `${theme.primaryGradient} text-white shadow-lg`
                   : 'text-white/70 hover:text-white hover:bg-white/10'
                 }
               `}
             >
               {/* Active tab glow effect */}
               {activeTab === tab.id && (
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-400/20 to-purple-400/20 rounded-xl"></div>
+                <div className={`absolute inset-0 ${theme.primaryGradientLight} rounded-xl`}></div>
               )}
               
               <div className="relative z-10 flex flex-col items-center space-y-1">

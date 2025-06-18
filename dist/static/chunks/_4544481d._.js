@@ -20,8 +20,17 @@ const theme = {
         buttonHover: "bg-white/35 backdrop-blur-md border border-white/50"
     },
     gradients: {
+        // Background gradients
         hero: "from-[#6FB0F1] via-[#3B85ED] to-[#0076CC]",
-        sidebar: "from-[#6FB0F1] to-[#0076CC]"
+        sidebar: "from-[#6FB0F1] to-[#0076CC]",
+        // Primary accent gradient (used for buttons, active states, skills bars, etc.)
+        primary: "from-[#e2bd36] to-[#e27636]",
+        primaryHover: "from-[#e2bd36] to-[#e27636]",
+        primaryLight: "from-[#e2bd36]/20 to-[#e27636]/20",
+        // Secondary gradients for certificates sections
+        secondary1: "from-green-600 to-teal-600",
+        secondary2: "from-[#e2bd36] to-[#e27636]",
+        secondary3: "from-blue-600 to-cyan-600"
     }
 };
 const getThemeClasses = ()=>{
@@ -34,6 +43,14 @@ const getThemeClasses = ()=>{
         heroBg: `bg-gradient-to-br ${theme.gradients.hero}`,
         primaryBg: `bg-gradient-to-r ${theme.gradients.sidebar}`,
         sectionBg: "bg-white",
+        // Unified gradients
+        primaryGradient: `bg-gradient-to-r ${theme.gradients.primary}`,
+        primaryGradientHover: `bg-gradient-to-r ${theme.gradients.primaryHover}`,
+        primaryGradientLight: `bg-gradient-to-r ${theme.gradients.primaryLight}`,
+        // Secondary gradients for certificates
+        secondaryGradient1: `bg-gradient-to-r ${theme.gradients.secondary1}`,
+        secondaryGradient2: `bg-gradient-to-r ${theme.gradients.secondary2}`,
+        secondaryGradient3: `bg-gradient-to-r ${theme.gradients.secondary3}`,
         // Text colors
         heroText: "text-white",
         primaryText: "text-gray-800",
@@ -81,7 +98,7 @@ function Sidebar() {
         className: "sticky top-8 h-fit mt",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white text-6xl font-bold shadow-lg hover:scale-110 transition-transform z-[100]",
+                className: `w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl ${theme.primaryGradient} flex items-center justify-center text-white text-6xl font-bold shadow-lg hover:scale-110 transition-transform z-[100]`,
                 children: "ZD"
             }, void 0, false, {
                 fileName: "[project]/components/Sidebar.tsx",
@@ -326,7 +343,7 @@ function Sidebar() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                className: "w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-6 rounded-2xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden group",
+                className: `w-full mt-6 ${theme.primaryGradient} hover:${theme.primaryGradientHover} text-white py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden group`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -362,7 +379,7 @@ function Sidebar() {
             }, void 0, true, {
                 fileName: "[project]/components/Sidebar.tsx",
                 lineNumber: 96,
-                columnNumber: 7
+                columnNumber: 15
             }, this)
         ]
     }, void 0, true, {
@@ -435,11 +452,11 @@ function TabNavigation({ activeTab, onTabChange }) {
                     onClick: ()=>onTabChange(tab.id),
                     className: `
                 flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-300 relative overflow-hidden group
-                ${activeTab === tab.id ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-white/10'}
+                ${activeTab === tab.id ? `${theme.primaryGradient} text-white shadow-lg` : 'text-white/70 hover:text-white hover:bg-white/10'}
               `,
                     children: [
                         activeTab === tab.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute inset-0 bg-gradient-to-r from-pink-400/20 to-purple-400/20 rounded-xl"
+                            className: `absolute inset-0 ${theme.primaryGradientLight} rounded-xl`
                         }, void 0, false, {
                             fileName: "[project]/components/TabNavigation.tsx",
                             lineNumber: 45,
@@ -1210,7 +1227,7 @@ function WorksTabs() {
                         const IconComponent = tab.icon;
                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: ()=>setActiveTab(tab.id),
-                            className: `flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${activeTab === tab.id ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg' : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'}`,
+                            className: `flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${activeTab === tab.id ? `${theme.primaryGradient} text-white shadow-lg` : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'}`,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconComponent, {
                                     size: 18
@@ -1330,15 +1347,18 @@ function TabContent({ activeTab }) {
     const languages = [
         {
             name: 'English',
-            level: 5
+            level: 5,
+            description: 'Professional working proficiency'
         },
         {
             name: 'Persian',
-            level: 5
+            level: 5,
+            description: 'Native'
         },
         {
             name: 'Finnish',
-            level: 2
+            level: 2,
+            description: 'A2'
         }
     ];
     const renderLanguageBalls = (level)=>{
@@ -1351,7 +1371,7 @@ function TabContent({ activeTab }) {
                 4,
                 5
             ].map((ball)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `w-3 h-3 rounded-full transition-all duration-300 ${ball <= level ? 'bg-gradient-to-r from-blue-400 to-purple-500 shadow-sm' : 'bg-white/20 border border-white/30'}`
+                    className: `w-3 h-3 rounded-full transition-all duration-300 ${ball <= level ? `${theme.primaryGradient} shadow-sm` : 'bg-white/20 border border-white/30'}`
                 }, ball, false, {
                     fileName: "[project]/components/TabContent.tsx",
                     lineNumber: 50,
@@ -1556,7 +1576,7 @@ function TabContent({ activeTab }) {
                                     children: [
                                         {
                                             category: "Professional Development & Other",
-                                            gradient: "from-green-400 to-teal-500",
+                                            gradient: theme.secondaryGradient1Raw,
                                             certificates: [
                                                 {
                                                     name: "Green Digital Skills Certificate",
@@ -1582,7 +1602,7 @@ function TabContent({ activeTab }) {
                                         },
                                         {
                                             category: "Digital Marketing & Social Media",
-                                            gradient: "from-pink-400 to-purple-500",
+                                            gradient: theme.secondaryGradient2Raw,
                                             certificates: [
                                                 {
                                                     name: "Digital Marketing Growth Programme 2024",
@@ -1613,7 +1633,7 @@ function TabContent({ activeTab }) {
                                         },
                                         {
                                             category: "IT & Technical Skills",
-                                            gradient: "from-blue-400 to-cyan-500",
+                                            gradient: theme.secondaryGradient3Raw,
                                             certificates: [
                                                 {
                                                     name: "Google IT Support Specialization",
@@ -1796,7 +1816,7 @@ function TabContent({ activeTab }) {
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "w-full bg-white/10 rounded-full h-2",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full transition-all duration-1000",
+                                                                className: `${theme.primaryGradient} h-2 rounded-full transition-all duration-1000`,
                                                                 style: {
                                                                     width: `${skill.level}%`
                                                                 }
@@ -1858,10 +1878,27 @@ function TabContent({ activeTab }) {
                                             children: languages.map((language)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "flex items-center justify-between",
                                                     children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "text-white text-sm font-medium",
-                                                            children: language.name
-                                                        }, void 0, false, {
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "flex flex-col",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-white text-sm font-medium",
+                                                                    children: language.name
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/TabContent.tsx",
+                                                                    lineNumber: 278,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-white/70 text-xs",
+                                                                    children: language.description
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/TabContent.tsx",
+                                                                    lineNumber: 279,
+                                                                    columnNumber: 25
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/components/TabContent.tsx",
                                                             lineNumber: 277,
                                                             columnNumber: 23
@@ -1898,7 +1935,7 @@ function TabContent({ activeTab }) {
                                     children: "Areas of Expertise"
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 287,
+                                    lineNumber: 290,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1908,18 +1945,18 @@ function TabContent({ activeTab }) {
                                             children: topic
                                         }, topic, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 290,
+                                            lineNumber: 293,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 288,
+                                    lineNumber: 291,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/TabContent.tsx",
-                            lineNumber: 286,
+                            lineNumber: 289,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1930,7 +1967,7 @@ function TabContent({ activeTab }) {
                                     children: "Tools I use"
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 303,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1940,18 +1977,18 @@ function TabContent({ activeTab }) {
                                             children: topic
                                         }, topic, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 303,
+                                            lineNumber: 306,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 301,
+                                    lineNumber: 304,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/TabContent.tsx",
-                            lineNumber: 299,
+                            lineNumber: 302,
                             columnNumber: 13
                         }, this)
                     ]
@@ -1971,20 +2008,20 @@ function TabContent({ activeTab }) {
                                     size: 32
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 319,
+                                    lineNumber: 322,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "What My Colleagues Say About Me"
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 320,
+                                    lineNumber: 323,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/TabContent.tsx",
-                            lineNumber: 318,
+                            lineNumber: 321,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2000,12 +2037,12 @@ function TabContent({ activeTab }) {
                                                 className: "text-pink-400 opacity-60"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TabContent.tsx",
-                                                lineNumber: 327,
+                                                lineNumber: 330,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 326,
+                                            lineNumber: 329,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2013,25 +2050,25 @@ function TabContent({ activeTab }) {
                                             children: "“Zeinab is a very dedicated and industrious person, with a positive personality. She adapted well to our various tasks and the hectic work schedule, and was proactive in developing the content of her tasks and giving feedback and contributing in several different projects, both internally and with our cooperation partners.”"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 329,
+                                            lineNumber: 332,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-center space-x-3",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full flex items-center justify-center",
+                                                    className: `w-12 h-12 ${theme.primaryGradient} rounded-full flex items-center justify-center`,
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-white font-bold text-sm",
                                                         children: "JK"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TabContent.tsx",
-                                                        lineNumber: 334,
+                                                        lineNumber: 337,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/TabContent.tsx",
-                                                    lineNumber: 333,
+                                                    lineNumber: 336,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2041,7 +2078,7 @@ function TabContent({ activeTab }) {
                                                             children: "Joanna Kumpula"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 337,
+                                                            lineNumber: 340,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2049,7 +2086,7 @@ function TabContent({ activeTab }) {
                                                             children: "Head of International Unit"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 338,
+                                                            lineNumber: 341,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2057,25 +2094,25 @@ function TabContent({ activeTab }) {
                                                             children: "Tampere University"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 339,
+                                                            lineNumber: 342,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/TabContent.tsx",
-                                                    lineNumber: 336,
+                                                    lineNumber: 339,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 332,
+                                            lineNumber: 335,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 325,
+                                    lineNumber: 328,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2088,12 +2125,12 @@ function TabContent({ activeTab }) {
                                                 className: "text-blue-400 opacity-60"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TabContent.tsx",
-                                                lineNumber: 347,
+                                                lineNumber: 350,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 346,
+                                            lineNumber: 349,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2101,25 +2138,25 @@ function TabContent({ activeTab }) {
                                             children: "“Zeinab was an invaluable member of our team and was always easy to work with. She is a very dedicated worker with great work ethic, and could always be trusted to handle her part of the work exceptionally well.”"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 349,
+                                            lineNumber: 352,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-center space-x-3",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center",
+                                                    className: `w-12 h-12 ${theme.secondaryGradient3} rounded-full flex items-center justify-center`,
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-white font-bold text-sm",
                                                         children: "CO"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TabContent.tsx",
-                                                        lineNumber: 354,
+                                                        lineNumber: 357,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/TabContent.tsx",
-                                                    lineNumber: 353,
+                                                    lineNumber: 356,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2129,7 +2166,7 @@ function TabContent({ activeTab }) {
                                                             children: "Camilla Ojala"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 357,
+                                                            lineNumber: 360,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2137,7 +2174,7 @@ function TabContent({ activeTab }) {
                                                             children: "Association Coordinator for the"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 358,
+                                                            lineNumber: 361,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2145,25 +2182,25 @@ function TabContent({ activeTab }) {
                                                             children: "UN Association of Finland"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 359,
+                                                            lineNumber: 362,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/TabContent.tsx",
-                                                    lineNumber: 356,
+                                                    lineNumber: 359,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 352,
+                                            lineNumber: 355,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 345,
+                                    lineNumber: 348,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2176,12 +2213,12 @@ function TabContent({ activeTab }) {
                                                 className: "text-green-400 opacity-60"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TabContent.tsx",
-                                                lineNumber: 367,
+                                                lineNumber: 370,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 366,
+                                            lineNumber: 369,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2189,25 +2226,25 @@ function TabContent({ activeTab }) {
                                             children: "“Zeinab works with full heart and expertise, which I greatly admire. She is responsible, spreads positive energy, and meets people with genuine warmth. Zeinab has excellent project management skills and is a reliable colleague who takes on tasks with courage.”"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 369,
+                                            lineNumber: 372,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-center space-x-3",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center",
+                                                    className: `w-12 h-12 ${theme.secondaryGradient1} rounded-full flex items-center justify-center`,
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-white font-bold text-sm",
                                                         children: "AK"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TabContent.tsx",
-                                                        lineNumber: 374,
+                                                        lineNumber: 377,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/TabContent.tsx",
-                                                    lineNumber: 373,
+                                                    lineNumber: 376,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2217,7 +2254,7 @@ function TabContent({ activeTab }) {
                                                             children: "Ansa Kilpeläinen"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 377,
+                                                            lineNumber: 380,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2225,7 +2262,7 @@ function TabContent({ activeTab }) {
                                                             children: "Officer at"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 378,
+                                                            lineNumber: 381,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2233,31 +2270,31 @@ function TabContent({ activeTab }) {
                                                             children: "Rauhankasvatusinstituutti"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TabContent.tsx",
-                                                            lineNumber: 379,
+                                                            lineNumber: 382,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/TabContent.tsx",
-                                                    lineNumber: 376,
+                                                    lineNumber: 379,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 372,
+                                            lineNumber: 375,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 365,
+                                    lineNumber: 368,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/TabContent.tsx",
-                            lineNumber: 323,
+                            lineNumber: 326,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2268,7 +2305,7 @@ function TabContent({ activeTab }) {
                                     children: "Let's Connect!"
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 387,
+                                    lineNumber: 390,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2276,31 +2313,31 @@ function TabContent({ activeTab }) {
                                     children: "I'm excited about joining a team where I can contribute meaningfully and continue to grow."
                                 }, void 0, false, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 388,
+                                    lineNumber: 391,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "mailto:zeyndanesh@gmail.com",
-                                    className: "inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300",
+                                    className: `inline-flex items-center space-x-2 ${theme.primaryGradient} hover:${theme.primaryGradientHover} text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300`,
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconMail$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconMail$3e$__["IconMail"], {
                                             size: 20
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 395,
+                                            lineNumber: 398,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "Send Email"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 396,
+                                            lineNumber: 399,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 391,
+                                    lineNumber: 394,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2310,14 +2347,14 @@ function TabContent({ activeTab }) {
                                             size: 16
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 399,
+                                            lineNumber: 402,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "Coffee chats? I'm in"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 400,
+                                            lineNumber: 403,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tabler$2f$icons$2d$react$2f$dist$2f$esm$2f$icons$2f$IconHeart$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__IconHeart$3e$__["IconHeart"], {
@@ -2325,25 +2362,25 @@ function TabContent({ activeTab }) {
                                             className: "text-pink-400"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TabContent.tsx",
-                                            lineNumber: 401,
+                                            lineNumber: 404,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TabContent.tsx",
-                                    lineNumber: 398,
+                                    lineNumber: 401,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/TabContent.tsx",
-                            lineNumber: 386,
+                            lineNumber: 389,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/TabContent.tsx",
-                    lineNumber: 317,
+                    lineNumber: 320,
                     columnNumber: 11
                 }, this);
             default:
@@ -2355,7 +2392,7 @@ function TabContent({ activeTab }) {
         children: renderContent()
     }, void 0, false, {
         fileName: "[project]/components/TabContent.tsx",
-        lineNumber: 413,
+        lineNumber: 416,
         columnNumber: 5
     }, this);
 }

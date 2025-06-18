@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { getThemeClasses } from '../lib/theme';
+import { getThemeClasses, theme } from '../lib/theme';
 import { 
   IconPalette, 
   IconCalendarEvent,
@@ -496,7 +496,7 @@ export default function WorksTabs() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg'
+                    ? `${theme.primaryGradient} text-white shadow-lg`
                     : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
                 }`}
               >

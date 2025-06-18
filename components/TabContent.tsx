@@ -38,9 +38,9 @@ export default function TabContent({ activeTab }: TabContentProps) {
   ];
 
   const languages = [
-    { name: 'English', level: 5 },
-    { name: 'Persian', level: 5 },
-    { name: 'Finnish', level: 2 }
+    { name: 'English', level: 5, description: 'Professional working proficiency' },
+    { name: 'Persian', level: 5, description: 'Native' },
+    { name: 'Finnish', level: 2, description: 'A2' }
   ];
 
   const renderLanguageBalls = (level: number) => {
@@ -51,7 +51,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
             key={ball}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               ball <= level 
-                ? 'bg-gradient-to-r from-blue-400 to-purple-500 shadow-sm' 
+                ? `${theme.primaryGradient} shadow-sm` 
                 : 'bg-white/20 border border-white/30'
             }`}
           />
@@ -115,7 +115,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 {[
                   {
                     category: "Professional Development & Other",
-                    gradient: "from-green-400 to-teal-500",
+                    gradient: theme.secondaryGradient1Raw,
                     certificates: [
                       {
                         name: "Green Digital Skills Certificate",
@@ -141,7 +141,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                   },
                   {
                     category: "Digital Marketing & Social Media",
-                    gradient: "from-pink-400 to-purple-500",
+                    gradient: theme.secondaryGradient2Raw,
                     certificates: [
                       {
                         name: "Digital Marketing Growth Programme 2024",
@@ -172,7 +172,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                   },
                   {
                     category: "IT & Technical Skills",
-                    gradient: "from-blue-400 to-cyan-500",
+                    gradient: theme.secondaryGradient3Raw,
                     certificates: [
                       {
                         name: "Google IT Support Specialization",
@@ -256,7 +256,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
                         <div 
-                          className="bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full transition-all duration-1000"
+                          className={`${theme.primaryGradient} h-2 rounded-full transition-all duration-1000`}
                           style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
@@ -274,7 +274,10 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 <div className="space-y-4">
                   {languages.map((language) => (
                     <div key={language.name} className="flex items-center justify-between">
-                      <span className="text-white text-sm font-medium">{language.name}</span>
+                      <div className="flex flex-col">
+                        <span className="text-white text-sm font-medium">{language.name}</span>
+                        <span className="text-white/70 text-xs">{language.description}</span>
+                      </div>
                       {renderLanguageBalls(language.level)}
                     </div>
                   ))}
@@ -330,7 +333,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                     &ldquo;Zeinab is a very dedicated and industrious person, with a positive personality. She adapted well to our various tasks and the hectic work schedule, and was proactive in developing the content of her tasks and giving feedback and contributing in several different projects, both internally and with our cooperation partners.&rdquo;
                   </p>
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full flex items-center justify-center">
+                    <div className={`w-12 h-12 ${theme.primaryGradient} rounded-full flex items-center justify-center`}>
                       <span className="text-white font-bold text-sm">JK</span>
                     </div>
                     <div>
@@ -350,7 +353,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                     &ldquo;Zeinab was an invaluable member of our team and was always easy to work with. She is a very dedicated worker with great work ethic, and could always be trusted to handle her part of the work exceptionally well.&rdquo;
                   </p>
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center">
+                    <div className={`w-12 h-12 ${theme.secondaryGradient3} rounded-full flex items-center justify-center`}>
                       <span className="text-white font-bold text-sm">CO</span>
                     </div>
                     <div>
@@ -370,7 +373,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                     &ldquo;Zeinab works with full heart and expertise, which I greatly admire. She is responsible, spreads positive energy, and meets people with genuine warmth. Zeinab has excellent project management skills and is a reliable colleague who takes on tasks with courage.&rdquo;
                   </p>
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center">
+                    <div className={`w-12 h-12 ${theme.secondaryGradient1} rounded-full flex items-center justify-center`}>
                       <span className="text-white font-bold text-sm">AK</span>
                     </div>
                     <div>
@@ -390,7 +393,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
               </p>
               <a 
                 href="mailto:zeyndanesh@gmail.com"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
+                className={`inline-flex items-center space-x-2 ${theme.primaryGradient} hover:${theme.primaryGradientHover} text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300`}
               >
                 <IconMail size={20} />
                 <span>Send Email</span>

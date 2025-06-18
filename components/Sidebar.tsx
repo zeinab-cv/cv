@@ -19,7 +19,7 @@ export default function Sidebar() {
   return (
     <div className="sticky top-8 h-fit mt">
       {/* Main Profile Card */}
-          <div className="w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white text-6xl font-bold shadow-lg hover:scale-110 transition-transform z-[100]">
+          <div className={`w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl ${theme.primaryGradient} flex items-center justify-center text-white text-6xl font-bold shadow-lg hover:scale-110 transition-transform z-[100]`}>
             ZD
           </div>
       <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} relative overflow-hidden hover:scale-105 transition-transform duration-300`}>
@@ -93,7 +93,7 @@ export default function Sidebar() {
       </div>
       
       {/* Download CV Button */}
-      <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-4 px-6 rounded-2xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden group">
+              <button className={`w-full mt-6 ${theme.primaryGradient} hover:${theme.primaryGradientHover} text-white py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden group`}>
         {/* Button animation overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <span className="relative z-10 flex items-center justify-center space-x-2">
