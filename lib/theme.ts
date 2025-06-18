@@ -14,13 +14,13 @@ export const theme = {
     sidebar: "from-[#6FB0F1] to-[#0076CC]",
     
     // Primary accent gradient (used for buttons, active states, skills bars, etc.)
-    primary: "from-[#e2bd36] to-[#e27636]",
-    primaryHover: "from-[#e2bd36] to-[#e27636]",
-    primaryLight: "from-[#e2bd36]/20 to-[#e27636]/20",
+    primary: "from-[#F8A662] to-[#E2A836]",
+    primaryHover: "from-[#F8A662] to-[#E2A836]",
+    primaryLight: "from-[#F8A662]/20 to-[#E2A836]/20",
     
     // Secondary gradients for certificates sections
     secondary1: "from-green-600 to-teal-600",
-    secondary2: "from-[#e2bd36] to-[#e27636]", // Using primary
+    secondary2: "from-[#F8A662] to-[#E2A836]", // Using primary
     secondary3: "from-blue-600 to-cyan-600"
   }
 };

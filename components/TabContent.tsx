@@ -115,7 +115,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 {[
                   {
                     category: "Professional Development & Other",
-                    gradient: theme.secondaryGradient1Raw,
+                    gradient: theme.secondaryGradient1,
                     certificates: [
                       {
                         name: "Green Digital Skills Certificate",
@@ -141,7 +141,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                   },
                   {
                     category: "Digital Marketing & Social Media",
-                    gradient: theme.secondaryGradient2Raw,
+                    gradient: theme.secondaryGradient2,
                     certificates: [
                       {
                         name: "Digital Marketing Growth Programme 2024",
@@ -172,7 +172,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                   },
                   {
                     category: "IT & Technical Skills",
-                    gradient: theme.secondaryGradient3Raw,
+                    gradient: theme.secondaryGradient3,
                     certificates: [
                       {
                         name: "Google IT Support Specialization",

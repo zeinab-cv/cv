@@ -1,3 +1,4 @@
+import { theme } from "@/lib/theme";
 
 export default function Skills() {
   
@@ -27,7 +28,7 @@ export default function Skills() {
               </div>
               <div className="w-full bg-white/10 rounded-full h-2">
                 <div 
-                  className={`${theme.primaryGradient} h-2 rounded-full transition-all duration-1000`}
+                  className={`${theme.gradients.primary} h-2 rounded-full transition-all duration-1000`}
                   style={{ width: `${skill.level}%` }}
                 ></div>
               </div>
