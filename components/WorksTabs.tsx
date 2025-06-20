@@ -36,6 +36,12 @@ export default function WorksTabs() {
 
   return (
     <div className="space-y-6">
+      <h2 
+        className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
+        data-aos="fade-up"
+      >
+        <span>Here are some of the organizations I have been involved with</span>
+      </h2>
       {/* Tab Navigation */}
       <div className={`${theme.glassOverlay} rounded-3xl p-6 ${theme.glassShadow}`}>
         <div className="flex flex-wrap gap-2">

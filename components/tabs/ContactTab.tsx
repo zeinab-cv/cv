@@ -29,7 +29,7 @@ export default function ContactTab() {
             <p className="text-white/80 text-sm leading-relaxed mb-6 italic">
               &ldquo;{testimonial.quote}&rdquo;
             </p>
-            <div className="flex items-center space-x-3">
+            <div className="flex  space-x-3">
               <div className={`w-12 h-12 ${theme[testimonial.gradient as keyof typeof theme]} rounded-full flex items-center justify-center`}>
                 <span className="text-white font-bold text-sm">{testimonial.initials}</span>
               </div>

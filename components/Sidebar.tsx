@@ -62,7 +62,7 @@ export default function Sidebar() {
               {knowledges.map((knowledge) => (
                 <span 
                   key={knowledge}
-                  className="px-2 py-1 bg-white/10 text-white/80 text-xs rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
+                  className={theme.skillPill}
                 >
                   {knowledge}
                 </span>

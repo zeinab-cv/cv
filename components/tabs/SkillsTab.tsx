@@ -16,6 +16,8 @@ export default function SkillsTab() {
                 ? `${theme.primaryGradient} shadow-sm` 
                 : 'bg-white/20 border border-white/30'
             }`}
+            data-aos="zoom-in"
+            data-aos-delay={500+ball * 150}
           />
         ))}
       </div>
@@ -24,6 +26,12 @@ export default function SkillsTab() {
 
   return (
     <div className="space-y-6">
+      <h2 
+        className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
+        data-aos="fade-up"
+      >
+        <span>I'm always trying to upskill myself</span>
+      </h2>
       {/* Working Skills and Language Skills - Side by Side */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Working Skills */}
@@ -45,10 +53,13 @@ export default function SkillsTab() {
                 <div className="flex justify-between mb-2">
                   <span className="text-white text-sm font-medium">{skill.name}</span>
                 </div>
-                <div className="w-full bg-white/10 rounded-full h-2">
+                <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
                   <div 
                     className={`${theme.primaryGradient} h-2 rounded-full transition-all duration-1000`}
                     style={{ width: `${skill.level}%` }}
+                    data-aos="fade-right"
+                    data-aos-delay={300+index * 200}
+                    data-aos-duration="1000"
                   ></div>
                 </div>
               </div>
@@ -96,7 +107,7 @@ export default function SkillsTab() {
           {topicsWorkedWith.map((topic, index) => (
             <span 
               key={topic}
-              className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
+              className={theme.skillPill}
               data-aos="fade-up"
               data-aos-delay={200 + index * 50}
             >
@@ -116,7 +127,7 @@ export default function SkillsTab() {
           {toolsWorkedWith.map((tool, index) => (
             <span 
               key={tool}
-              className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 transition-colors duration-300"
+              className={theme.skillPill}
               data-aos="fade-up"
               data-aos-delay={300 + index * 50}
             >
