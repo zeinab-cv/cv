@@ -73,7 +73,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
             </div>
             <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
               <p className="text-white/70 leading-relaxed">
-              I’m a project coordinator with a background in anthropology, social development, and peace studies. I work at the intersection of youth engagement, community development, and digital communication, with a passion for inclusive projects, dialogue, and creative collaboration.
+              I&apos;m a project coordinator with a background in anthropology, social development, and peace studies. I work at the intersection of youth engagement, community development, and digital communication, with a passion for inclusive projects, dialogue, and creative collaboration.
               </p>
             </div>
           </div>
@@ -88,18 +88,27 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 <IconSchool size={24} />
                 <span>Education</span>
               </h3>
-              <div className="space-y-4">
-                <div className="border-l-2 border-pink-400/30 pl-4">
-                  <h4 className="font-semibold text-white">M.Sc. in Peace, Mediation and Conflict Research</h4>
-                  <p className="text-white/70 text-sm">University • 2022-2023</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-pink-300/60 hover:bg-white/10 hover:shadow-lg transition-all duration-300 flex items-start space-x-3">
+                  <IconSchool size={18} className="text-pink-300 mt-1 opacity-80" />
+                  <div>
+                    <h4 className="font-semibold text-white">M.Sc. in Peace, Mediation and Conflict Research</h4>
+                    <p className="text-white/70 text-sm">Tampere University • 2022-2023</p>
+                  </div>
                 </div>
-                <div className="border-l-2 border-pink-400/30 pl-4">
-                  <h4 className="font-semibold text-white">M.A. in Social Development</h4>
-                  <p className="text-white/70 text-sm">University • 2020-2022</p>
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-pink-300/60 hover:bg-white/10 hover:shadow-lg transition-all duration-300 flex items-start space-x-3">
+                  <IconSchool size={18} className="text-pink-300 mt-1 opacity-80" />
+                  <div>
+                    <h4 className="font-semibold text-white">M.A. in Social Development</h4>
+                    <p className="text-white/70 text-sm">Tampere University • 2020-2022</p>
+                  </div>
                 </div>
-                <div className="border-l-2 border-pink-400/30 pl-4">
-                  <h4 className="font-semibold text-white">B.A. in Anthropology</h4>
-                  <p className="text-white/70 text-sm">University • 2016-2020</p>
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-pink-300/60 hover:bg-white/10 hover:shadow-lg transition-all duration-300 flex items-start space-x-3">
+                  <IconSchool size={18} className="text-pink-300 mt-1 opacity-80" />
+                  <div>
+                    <h4 className="font-semibold text-white">B.A. in Anthropology</h4>
+                    <p className="text-white/70 text-sm">University • Iran, Tehran • 2016-2020</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -116,6 +125,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
                   {
                     category: "Professional Development & Other",
                     gradient: theme.secondaryGradient1,
+                    borderColor: "hover:border-green-500/60",
+                    iconColor: "text-green-300",
                     certificates: [
                       {
                         name: "Green Digital Skills Certificate",
@@ -142,6 +153,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
                   {
                     category: "Digital Marketing & Social Media",
                     gradient: theme.secondaryGradient2,
+                    borderColor: "hover:border-orange-300/60",
+                    iconColor: "text-orange-300",
                     certificates: [
                       {
                         name: "Digital Marketing Growth Programme 2024",
@@ -173,6 +186,8 @@ export default function TabContent({ activeTab }: TabContentProps) {
                   {
                     category: "IT & Technical Skills",
                     gradient: theme.secondaryGradient3,
+                    borderColor: "hover:border-blue-300/60",
+                    iconColor: "text-blue-300",
                     certificates: [
                       {
                         name: "Google IT Support Specialization",
@@ -214,11 +229,14 @@ export default function TabContent({ activeTab }: TabContentProps) {
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {section.certificates.map((cert) => (
-                        <div key={cert.name} className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                          <h5 className="font-medium text-white text-sm">{cert.name}</h5>
-                          <p className="text-white/60 text-xs">
-                            {cert.issuer && `${cert.issuer} • `}{cert.date}
-                          </p>
+                        <div key={cert.name} className={`bg-white/5 rounded-xl p-4 border border-white/10 ${section.borderColor} hover:bg-white/10 hover:shadow-lg transition-all duration-300 flex items-start space-x-3`}>
+                          <IconCertificate size={18} className={`${section.iconColor} mt-1 opacity-80`} />
+                          <div>
+                            <h5 className="font-medium text-white text-sm">{cert.name}</h5>
+                            <p className="text-white/60 text-xs">
+                              {cert.issuer && `${cert.issuer} • `}{cert.date}
+                            </p>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -326,7 +344,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 {/* Testimonial 1 - Joanna Kumpula */}
                 <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
                   <div className="flex items-center justify-center mb-4">
-                    <IconQuote size={24} className="text-pink-400 opacity-60" />
+                    <IconQuote size={24} className="text-pink-300 opacity-60" />
                   </div>
                   <p className="text-white/80 text-sm leading-relaxed mb-6 italic">
                     &ldquo;Zeinab is a very dedicated and industrious person, with a positive personality. She adapted well to our various tasks and the hectic work schedule, and was proactive in developing the content of her tasks and giving feedback and contributing in several different projects, both internally and with our cooperation partners.&rdquo;
@@ -346,7 +364,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 {/* Testimonial 2 - Camilla Ojala */}
                 <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
                   <div className="flex items-center justify-center mb-4">
-                    <IconQuote size={24} className="text-blue-400 opacity-60" />
+                    <IconQuote size={24} className="text-blue-300 opacity-60" />
                   </div>
                   <p className="text-white/80 text-sm leading-relaxed mb-6 italic">
                     &ldquo;Zeinab was an invaluable member of our team and was always easy to work with. She is a very dedicated worker with great work ethic, and could always be trusted to handle her part of the work exceptionally well.&rdquo;
@@ -366,7 +384,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
                 {/* Testimonial 3 - Ansa Kilpeläinen */}
                 <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center`}>
                   <div className="flex items-center justify-center mb-4">
-                    <IconQuote size={24} className="text-green-400 opacity-60" />
+                    <IconQuote size={24} className="text-green-300 opacity-60" />
                   </div>
                   <p className="text-white/80 text-sm leading-relaxed mb-6 italic">
                     &ldquo;Zeinab works with full heart and expertise, which I greatly admire. She is responsible, spreads positive energy, and meets people with genuine warmth. Zeinab has excellent project management skills and is a reliable colleague who takes on tasks with courage.&rdquo;
@@ -400,7 +418,7 @@ export default function TabContent({ activeTab }: TabContentProps) {
               <p className="text-white/70 flex items-center justify-center space-x-2 mt-4">
                 <IconCoffee size={16} />
                 <span>Coffee chats? I&apos;m in</span>
-                <IconHeart size={16} className="text-pink-400" />
+                <IconHeart size={16} className="text-pink-300" />
               </p>
             </div>
           </div>

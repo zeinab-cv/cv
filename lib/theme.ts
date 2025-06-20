@@ -58,6 +58,9 @@ export const getThemeClasses = () => {
     
     // Shadows
     cardShadow: "shadow-lg",
-    glassShadow: "shadow-2xl shadow-blue-500/10"
+    glassShadow: "shadow-2xl shadow-blue-500/10",
+
+    // Reusable pill/tag style
+    skillPill: "px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/20 hover:bg-gradient-to-br hover:from-yellow-300/30 hover:via-orange-400/30 hover:to-red-300/30 transition-colors duration-300"
   };
 }; 
