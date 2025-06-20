@@ -21,6 +21,8 @@ export default function WorksTabs() {
     { id: 'organizations', label: 'Events i have organized', icon: IconUsers }
   ];
 
+  const activeIndex = tabs.findIndex(tab => tab.id === activeTab);
+
   const renderTabContent = () => {
     switch (activeTab) {
       case 'experience':
@@ -43,16 +45,18 @@ export default function WorksTabs() {
         <span>Here are some of the organizations I have been involved with</span>
       </h2>
       {/* Tab Navigation */}
-      <div className={`${theme.glassOverlay} rounded-3xl p-6 ${theme.glassShadow}`}>
-        <div className="flex flex-wrap gap-2">
-          {tabs.map((tab) => {
+      <div className={`${theme.glassOverlay} rounded-3xl p-6 ${theme.glassShadow} relative`}>
+        
+        <div className="flex flex-wrap gap-2 relative z-10">
+          {tabs.map((tab, index) => {
             const IconComponent = tab.icon;
+            const isActive = activeTab === tab.id;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
-                  activeTab === tab.id
+                className={`flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 relative ${
+                  isActive
                     ? `${theme.primaryGradient} text-white shadow-lg`
                     : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
                 }`}

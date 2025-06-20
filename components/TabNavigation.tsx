@@ -22,10 +22,22 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
     { id: 'skills', label: 'Skills', icon: IconBrain },
     { id: 'contact', label: 'Contact', icon: IconPhone }
   ];
+
+  const activeIndex = tabs.findIndex(tab => tab.id === activeTab);
   
   return (
-    <div className={`${theme.glassCard} rounded-2xl p-2 ${theme.cardShadow} mb-8`}>
-      <div className="flex space-x-2">
+    <div className={`${theme.glassCard} rounded-2xl p-2 ${theme.cardShadow} mb-8 relative`}>
+      {/* Sliding indicator */}
+      <div 
+        className={`absolute top-2 bottom-2 ${theme.primaryGradient} rounded-xl transition-all duration-300 ease-out shadow-lg`}
+        style={{
+          width: `calc(20% - 4px)`,
+          left: `calc(${activeIndex * 20}% + 4px)`,
+          transform: 'translateX(0)'
+        }}
+      />
+      
+      <div className="flex space-x-2 relative z-10">
         {tabs.map((tab) => {
           const IconComponent = tab.icon;
           return (
@@ -35,16 +47,11 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
               className={`
                 flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-300 relative overflow-hidden group
                 ${activeTab === tab.id 
-                  ? `${theme.primaryGradient} text-white shadow-lg`
+                  ? 'text-white'
                   : 'text-white/70 hover:text-white hover:bg-white/10'
                 }
               `}
             >
-              {/* Active tab glow effect */}
-              {activeTab === tab.id && (
-                <div className={`absolute inset-0 ${theme.primaryGradientLight} rounded-xl`}></div>
-              )}
-              
               <div className="relative z-10 flex flex-col items-center space-y-1">
                 <IconComponent size={20} />
                 <span className="text-sm font-medium">{tab.label}</span>
