@@ -30,7 +30,7 @@ export default function SkillsTab() {
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-up"
       >
-        <span>I'm always trying to upskill myself</span>
+        <span>I&apos;m always trying to upskill myself</span>
       </h2>
       {/* Working Skills and Language Skills - Side by Side */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

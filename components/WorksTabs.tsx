@@ -21,7 +21,6 @@ export default function WorksTabs() {
     { id: 'organizations', label: 'Events i have organized', icon: IconUsers }
   ];
 
-  const activeIndex = tabs.findIndex(tab => tab.id === activeTab);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -48,7 +47,7 @@ export default function WorksTabs() {
       <div className={`${theme.glassOverlay} rounded-3xl p-6 ${theme.glassShadow} relative`}>
         
         <div className="flex flex-wrap gap-2 relative z-10">
-          {tabs.map((tab, index) => {
+          {tabs.map((tab) => {
             const IconComponent = tab.icon;
             const isActive = activeTab === tab.id;
             return (

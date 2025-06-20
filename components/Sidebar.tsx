@@ -57,12 +57,12 @@ export default function Sidebar() {
           </div>
           
           {/* Knowledge & Tools */}
-          <div className="mb-6">
+          <div className="mb-4">
             <div className="flex flex-wrap gap-2 justify-center">
               {knowledges.map((knowledge) => (
                 <span 
                   key={knowledge}
-                  className={theme.skillPill}
+                  className={`${theme.skillPill}`}
                 >
                   {knowledge}
                 </span>
