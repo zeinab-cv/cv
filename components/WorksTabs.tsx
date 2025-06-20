@@ -14,6 +14,15 @@ export default function WorksTabs() {
   const [activeTab, setActiveTab] = useState('projects');
   const theme = getThemeClasses();
 
+  const colorMapping: { [key: string]: { text: string; border: string } } = {
+    orange: { text: 'text-orange-300', border: 'border-orange-300/30 hover:border-orange-300/80' },
+    blue: { text: 'text-blue-300', border: 'border-blue-300/30 hover:border-blue-300/80' },
+    green: { text: 'text-green-300', border: 'border-green-300/30 hover:border-green-300/80' },
+    pink: { text: 'text-pink-300', border: 'border-pink-300/30 hover:border-pink-300/80' },
+    purple: { text: 'text-purple-300', border: 'border-purple-300/30 hover:border-purple-300/80' },
+    teal: { text: 'text-teal-300', border: 'border-teal-300/30 hover:border-teal-300/80' },
+  };
+
   const tabs = [
     { id: 'projects', label: 'Experience', icon: IconPalette },
     { id: 'events', label: 'Organizations i have involved with', icon: IconCalendarEvent },
@@ -85,13 +94,13 @@ export default function WorksTabs() {
           title: "No Hate Speech: Youth Dialogue & Workshop Series",
           organization: "UN Youth of Finland",
           year: 2023,
-          about: "Led workshops addressing hate speech using empathy mapping and backcasting tools. Partnered with Norway’s Stopp Hatprat and coordinated a study visit to Vienna to engage with international peace institutions, including the UN, OSCE, and EU Delegation."
+          about: "Led workshops addressing hate speech using empathy mapping and backcasting tools. Partnered with Norway's Stopp Hatprat and coordinated a study visit to Vienna to engage with international peace institutions, including the UN, OSCE, and EU Delegation."
         },
         {
           title: "World Village Festival – Youth Advocacy for SDGs",
           organization: "UN Youth of Finland (with UN Association of Finland)",
           year: 2022,
-          about: "Contributed to organizing and coordinating UN Youth’s presence at World Village Festival in Helsinki. Engaged the public in discussions around sustainable development, peace, and youth empowerment."
+          about: "Contributed to organizing and coordinating UN Youth's presence at World Village Festival in Helsinki. Engaged the public in discussions around sustainable development, peace, and youth empowerment."
         }
       ]
     },
@@ -111,7 +120,7 @@ export default function WorksTabs() {
           title: "Employability Pathways for International Students",
           organization: "Symbiosis Tampere",
           year: "2022–2023",
-          about: "Co-organized stakeholder workshops as part of the International Employability Landscape project. Brought together university and master’s program staff to discuss improving job market access for international students in Tampere."
+          about: "Co-organized stakeholder workshops as part of the International Employability Landscape project. Brought together university and master's program staff to discuss improving job market access for international students in Tampere."
         }
       ]
     },
@@ -125,7 +134,7 @@ export default function WorksTabs() {
           title: "Welcome Week & Study & Stay Showcase",
           organization: "Tampere University",
           year: 2022,
-          about: "Organized and represented key university initiatives for international students during Welcome Week. Managed event stands, created digital content, coordinated Guidebook app updates, and facilitated peer engagement through tutoring meetups and storytelling sessions. Participated in the “Study & Stay” employability project and provided strategic feedback from an international student perspective."
+          about: "Organized and represented key university initiatives for international students during Welcome Week. Managed event stands, created digital content, coordinated Guidebook app updates, and facilitated peer engagement through tutoring meetups and storytelling sessions. Participated in the \"Study & Stay\" employability project and provided strategic feedback from an international student perspective."
         }
       ]
     },
@@ -139,6 +148,7 @@ export default function WorksTabs() {
           {
             "organization": "Nordic Inclusify ry",
             "location": "Helsinki, Uusimaa, Finland",
+            "color": "blue",
             "positions": [
               {
                 "worktitle": "Board Member | Marketing & Social Media Team",
@@ -151,6 +161,7 @@ export default function WorksTabs() {
           {
             "organization": "Cooperative 3E",
             "location": "Vaasa, Ostrobothnia, Finland",
+            "color": "green",
             "positions": [
               {
                 "worktitle": "Coordinator, Youth Engagement & Administration",
@@ -187,6 +198,7 @@ export default function WorksTabs() {
           {
             "organization": "Rauhankasvatusinstituutti – The Peace Education Institute",
             "location": "Helsinki, Uusimaa, Finland / Finland (Hybrid)",
+            "color": "teal",
             "positions": [
               {
                 "worktitle": "Steering Group Member",
@@ -205,6 +217,7 @@ export default function WorksTabs() {
           {
             "organization": "UN Youth of Finland",
             "location": "Helsinki, Uusimaa, Finland / Hybrid",
+            "color": "blue",
             "positions": [
               {
                 "worktitle": "International Affairs Coordinator",
@@ -233,6 +246,7 @@ export default function WorksTabs() {
           {
             "organization": "Girls in Marketing",
             "location": "Liverpool, England, United Kingdom (Remote)",
+            "color": "pink",
             "positions": [
               {
                 "worktitle": "Digital Marketing Trainee – Virtual Training Program",
@@ -245,6 +259,7 @@ export default function WorksTabs() {
           {
             "organization": "Women4Cyber Finland",
             "location": "Finland (Remote)",
+            "color": "pink",
             "positions": [
               {
                 "worktitle": "Social Media Team Member",
@@ -262,6 +277,7 @@ export default function WorksTabs() {
           {
             "organization": "Symbiosis Tampere",
             "location": "Tampere, Pirkanmaa, Finland",
+            "color": "orange",
             "positions": [
               {
                 "worktitle": "Data Analyst & Workshop Coordinator",
@@ -283,6 +299,7 @@ export default function WorksTabs() {
           {
             "organization": "Tampere University",
             "location": "Tampere, Pirkanmaa, Finland",
+            "color": "purple",
             "positions": [
               {
                 "worktitle": "Intern – International Education & Integration",
@@ -305,44 +322,48 @@ export default function WorksTabs() {
 
         return (
           <div className="space-y-6">
-            {workExperienceByOrganization.map((org, orgIndex) => (
-              <div key={orgIndex} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
-                <div className="flex items-start space-x-3 mb-6">
-                  <IconBriefcase size={24} className="text-blue-600 mt-1" />
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-1">{org.organization}</h3>
-                    <p className="text-white/60 text-sm mb-4">{org.location}</p>
-                    
-                    {/* Multiple positions within the organization */}
-                    <div className="space-y-6">
-                      {org.positions.map((position, positionIndex) => (
-                        <div key={positionIndex} className="border-l-2 border-blue-700/30 pl-4">
-                          <h4 className="text-lg font-semibold text-white mb-1">{position.worktitle}</h4>
-                          <p className="text-blue-700 text-sm mb-1">{position.duration}</p>
-                          <p className="text-white/70 text-sm mb-4">{position.description}</p>
-                          
-                          {position.projects && position.projects.length > 0 && (
-                            <div className="space-y-3">
-                              <h5 className="text-base font-medium text-white">Key Projects:</h5>
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                {position.projects.map((project, projectIndex) => (
-                                  <div key={projectIndex} className="border-l-2 border-blue-700/20 pl-4 hover:bg-white/5 p-3 rounded-r-xl transition-all duration-300">
-                                    <h6 className="font-medium text-white/90 mb-1">{project.projectname}</h6>
-                                    <p className="text-white/60 text-sm">{project.projectdescription}</p>
-                                  </div>
-                                ))}
+            {workExperienceByOrganization.map((org, orgIndex) => {
+              const colors = colorMapping[org.color] || colorMapping.orange;
+              return (
+                <div key={orgIndex} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
+                  <div className="flex items-start space-x-3 mb-6">
+                    <IconBriefcase size={24} className={`${colors.text} mt-1`} />
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-1">{org.organization}</h3>
+                      <p className="text-white/60 text-sm mb-4">{org.location}</p>
+                      
+                      {/* Multiple positions within the organization */}
+                      <div className="space-y-6">
+                        {org.positions.map((position, positionIndex) => (
+                          <div key={positionIndex} className={`border-l-3 ${colors.border} pl-4 transition-all duration-300`}>
+                            <h4 className="text-lg font-semibold text-white mb-1">{position.worktitle}</h4>
+                            <p className={`${colors.text} text-sm mb-1 font-semibold`}>{position.duration}</p>
+                            <p className="text-white/70 text-sm mb-4">{position.description}</p>
+                            
+                            {position.projects && position.projects.length > 0 && (
+                              <div className="space-y-3">
+                                <h5 className="text-base font-medium text-white">Projects:</h5>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                  {position.projects.map((project, projectIndex) => (
+                                    <div key={projectIndex} className={`border-l-2 ${colors.border} pl-4 hover:bg-white/5 p-3 rounded-r-xl transition-all duration-300`}>
+                                      <h6 className="font-medium text-white/90 mb-1">{project.projectname}</h6>
+                                      <p className="text-white/60 text-sm">{project.projectdescription}</p>
+                                    </div>
+                                  ))}
+                                </div>
                               </div>
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         );
+
 
       case 'events':
         const additionalOrganizations = [
@@ -406,10 +427,10 @@ export default function WorksTabs() {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {additionalOrganizations.map((org, index) => {
-              const colorClass = org.color === 'pink' ? 'text-pink-400' :
-                                 org.color === 'cyan' ? 'text-cyan-400' :
-                                 org.color === 'teal' ? 'text-teal-400' :
-                                 org.color === 'emerald' ? 'text-emerald-400' : 'text-blue-400';
+              const colorClass = org.color === 'pink' ? 'text-pink-300' :
+                                 org.color === 'cyan' ? 'text-cyan-300' :
+                                 org.color === 'teal' ? 'text-teal-300' :
+                                 org.color === 'emerald' ? 'text-emerald-300' : 'text-blue-300';
               
               return (
                 <div key={index} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>
@@ -440,16 +461,16 @@ export default function WorksTabs() {
           <div className="space-y-6">
             {organizationsData.map((org, index) => {
               const IconComponent = org.icon;
-              const colorClass = org.color === 'indigo' ? 'text-indigo-400' : 
-                                 org.color === 'blue' ? 'text-blue-400' :
-                                 org.color === 'green' ? 'text-green-400' :
-                                 org.color === 'orange' ? 'text-orange-400' :
-                                 org.color === 'purple' ? 'text-purple-400' : 'text-pink-400';
-              const borderClass = org.color === 'indigo' ? 'border-indigo-400/30' : 
-                                  org.color === 'blue' ? 'border-blue-400/30' :
-                                  org.color === 'green' ? 'border-green-400/30' :
-                                  org.color === 'orange' ? 'border-orange-400/30' :
-                                  org.color === 'purple' ? 'border-purple-400/30' : 'border-pink-400/30';
+              const colorClass = org.color === 'indigo' ? 'text-indigo-300' : 
+                                 org.color === 'blue' ? 'text-blue-300' :
+                                 org.color === 'green' ? 'text-green-300' :
+                                 org.color === 'orange' ? 'text-orange-300' :
+                                 org.color === 'purple' ? 'text-purple-300' : 'text-pink-300';
+              const borderClass = org.color === 'indigo' ? 'border-indigo-300/30 hover:border-indigo-300' : 
+                                  org.color === 'blue' ? 'border-blue-300/30 hover:border-blue-300' :
+                                  org.color === 'green' ? 'border-green-300/30 hover:border-green-300' :
+                                  org.color === 'orange' ? 'border-orange-300/30 hover:border-orange-300' :
+                                  org.color === 'purple' ? 'border-purple-300/30 hover:border-purple-300' : 'border-pink-300/30 hover:border-pink-300';
               
               return (
                 <div key={index} className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}>

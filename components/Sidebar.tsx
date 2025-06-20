@@ -24,7 +24,9 @@ export default function Sidebar() {
           </div>
       <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} relative overflow-hidden hover:scale-105 transition-transform duration-300`}>
         {/* Background gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-400/20 via-blue-400/20 to-purple-400/20 rounded-3xl"></div>
+
+     
+
         
         {/* Animated background elements */}
         <div className="absolute top-4 right-4 w-8 h-8 bg-white/10 rounded-full animate-pulse-glow"></div>

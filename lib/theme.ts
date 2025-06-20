@@ -5,7 +5,7 @@ export const theme = {
   glass: {
     card: "bg-white/30 backdrop-blur-md border border-white/30",
     overlay: "bg-white/25 backdrop-blur-xl border border-white/25",
-    button: "bg-white/25 backdrop-blur-sm border border-white/30",
+    button: "bg-white/5 backdrop-blur-sm border border-white/30",
     buttonHover: "bg-white/35 backdrop-blur-md border border-white/50"
   },
   gradients: {
@@ -53,6 +53,7 @@ export const getThemeClasses = () => {
     primaryText: "text-gray-800",
     lightText: "text-gray-600",
     whiteText: "text-white",
+    primaryGradientText: `bg-gradient-to-r ${theme.gradients.primary} text-transparent bg-clip-text`,
     secondaryButton: "bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-600",
     
     // Shadows
