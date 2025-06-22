@@ -1,5 +1,4 @@
 import { getThemeClasses } from '../../lib/theme';
-import { IconQuote } from '@tabler/icons-react';
 
 export default function HomeTab() {
   const theme = getThemeClasses();
