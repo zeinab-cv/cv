@@ -27,17 +27,17 @@ export const educationData = [
   {
     degree: "M.Sc. in Peace, Mediation and Conflict Research",
     institution: "Tampere University",
-    period: "2022-2023"
+    period: "2020-2023"
   },
   {
     degree: "M.A. in Social Development", 
-    institution: "Tampere University",
-    period: "2020-2022"
+    institution: "University of Tehran, Iran",
+    period: "2012-2015"
   },
   {
     degree: "B.A. in Anthropology",
-    institution: "University • Iran, Tehran",
-    period: "2016-2020"
+    institution: "University of Tehran, Iran",
+    period: "2007-2011"
   }
 ];
 

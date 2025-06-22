@@ -12,8 +12,8 @@ export default function Sidebar() {
   const theme = getThemeClasses();
   
   const knowledges = [
-    'Digital Marketing', 'Content Creation',
-    'Community Engagement', 'Multicultural Teams', 'Project Coordination'
+    'Stakeholder Collaboration', 'Event Planning',
+    'Community Engagement', 'Erasmus+ and international projects', 'Project Coordination'
   ];
   
   return (
