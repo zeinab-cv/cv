@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getThemeClasses } from '../lib/theme';
 import { 
   IconMail, 
@@ -19,8 +20,17 @@ export default function Sidebar() {
   return (
     <div className="sticky top-8 h-fit mt">
       {/* Main Profile Card */}
-          <div className={`w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl ${theme.primaryGradient} flex items-center justify-center text-white text-6xl font-bold shadow-lg hover:scale-110 transition-transform z-[100]`}>
-            ZD
+          <div className={`w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl ${theme.primaryGradient} p-2 flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-[100]`}>
+            <div className="w-full h-full rounded-lg overflow-hidden">
+              <Image 
+                src="/profilePicture.png" 
+                alt="Zeinab Daneshpour"
+                width={176}
+                height={176}
+                className="object-cover w-full h-full"
+                priority
+              />
+            </div>
           </div>
       <div className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} relative overflow-hidden hover:scale-105 transition-transform duration-300`}>
         {/* Background gradient overlay */}
@@ -95,14 +105,18 @@ export default function Sidebar() {
       </div>
       
       {/* Download CV Button */}
-              <button className={`w-full mt-6 ${theme.primaryGradient} hover:${theme.primaryGradientHover} text-white py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden group`}>
+              <a 
+                href="/Zeinab Daneshpour. CV.pdf" 
+                download="Zeinab_Daneshpour_CV.pdf"
+                className={`w-full mt-6 ${theme.primaryGradient} hover:${theme.primaryGradientHover} text-white py-4 px-6 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 relative overflow-hidden group block text-center`}
+              >
         {/* Button animation overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <span className="relative z-10 flex items-center justify-center space-x-2">
           <IconDownload size={18} />
           <span>Download CV</span>
         </span>
-      </button>
+      </a>
     </div>
   );
 } 
