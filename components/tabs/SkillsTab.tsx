@@ -5,6 +5,40 @@ import { IconBrain, IconWorld } from '@tabler/icons-react';
 export default function SkillsTab() {
   const theme = getThemeClasses();
 
+  // Emoji mappings for working skills, topics and tools
+  const workingSkillEmojis: { [key: string]: string } = {
+    'Project Coordination': '📋',
+    'Social Media Strategy': '📱',
+    'Cross-cultural Communication': '🌍',
+    'Event Management': '🎉'
+  };
+
+  const topicEmojis: { [key: string]: string } = {
+    'Sustainable Development': '🌱',
+    'Peace Education': '🕊️',
+    'Youth Participation': '👥',
+    'Diversity, Equity, Inclusion': '🌈',
+    'Non-Formal learning': '📚',
+    'Future Thinking & Civic Imagination': '🔮',
+    'Safe Space principals': '🛡️',
+    'Media Literacy': '📱'
+  };
+
+  const toolEmojis: { [key: string]: string } = {
+    'Canva': '🎨',
+    'WordPress': '📝',
+    'Microsoft Office Suite': '💼',
+    'Kling AI': '🤖',
+    'Google Workspace': '📊',
+    'Zoom': '📹',
+    'Slack': '💬',
+    'Trello': '📋',
+    'ElevenLabs': '🎵',
+    'Leonardo AI': '🎨',
+    'CapCut': '✂️',
+    'Meta': '📘'
+  };
+
   const renderLanguageBalls = (level: number) => {
     return (
       <div className="flex space-x-1">
@@ -51,7 +85,10 @@ export default function SkillsTab() {
                 data-aos-delay={index * 100}
               >
                 <div className="flex justify-between mb-2">
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                  <span className="text-white text-sm font-medium flex items-center">
+                    <span className="mr-2">{workingSkillEmojis[skill.name] || '⚡'}</span>
+                    {skill.name}
+                  </span>
                 </div>
                 <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
                   <div 
@@ -111,6 +148,7 @@ export default function SkillsTab() {
               data-aos="fade-up"
               data-aos-delay={200 + index * 50}
             >
+              <span className="mr-2">{topicEmojis[topic] || '📌'}</span>
               {topic}
             </span>
           ))}
@@ -131,6 +169,7 @@ export default function SkillsTab() {
               data-aos="fade-up"
               data-aos-delay={300 + index * 50}
             >
+              <span className="mr-2">{toolEmojis[tool] || '🔧'}</span>
               {tool}
             </span>
           ))}

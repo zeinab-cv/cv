@@ -18,7 +18,7 @@ export const toolsWorkedWith = [
 ];
 
 export const languages = [
-  { name: 'English', level: 5, description: 'Professional working proficiency' },
+  { name: 'English', level: 5, description: 'Professional' },
   { name: 'Persian', level: 5, description: 'Native' },
   { name: 'Finnish', level: 2, description: 'A2' }
 ];
