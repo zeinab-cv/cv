@@ -144,7 +144,7 @@ export default function SkillsTab() {
           {topicsWorkedWith.map((topic, index) => (
             <span 
               key={topic}
-              className={theme.skillPill}
+              className={theme.skillPill2}
               data-aos="fade-up"
               data-aos-delay={200 + index * 50}
             >
@@ -165,7 +165,7 @@ export default function SkillsTab() {
           {toolsWorkedWith.map((tool, index) => (
             <span 
               key={tool}
-              className={theme.skillPill}
+              className={theme.skillPill2}
               data-aos="fade-up"
               data-aos-delay={300 + index * 50}
             >
