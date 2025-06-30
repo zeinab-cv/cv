@@ -10,6 +10,7 @@ import {
 import ExperienceTab from './works/ExperienceTab';
 import EventsTab from './works/EventsTab';
 import OrganizationsTab from './works/OrganizationsTab';
+import TypeWriter from './TypeWriter';
 
 export default function WorksTabs() {
   const [activeTab, setActiveTab] = useState('experience');
@@ -41,7 +42,11 @@ export default function WorksTabs() {
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-up"
       >
-        <span>Snapshots from my professional journey so far</span>
+        <TypeWriter 
+          text="Snapshots from my professional journey so far"
+          delay={20}
+          speed={40}
+        />
       </h2>
       {/* Tab Navigation */}
       <div className={`${theme.glassOverlay} rounded-3xl p-6 ${theme.glassShadow} relative`}>

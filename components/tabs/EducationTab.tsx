@@ -1,6 +1,7 @@
 import { getThemeClasses } from '../../lib/theme';
 import { educationData, certificatesData } from '../data/tabContentData';
 import { IconSchool, IconCertificate } from '@tabler/icons-react';
+import TypeWriter from '../TypeWriter';
 
 export default function EducationTab() {
   const theme = getThemeClasses();
@@ -12,7 +13,11 @@ export default function EducationTab() {
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-up"
       >
-        <span>A look at what I’ve studied over the years</span>
+        <TypeWriter 
+          text="A look at what I’ve studied over the years"
+          delay={20}
+          speed={40}
+        />
       </h2>
       <div 
         className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}

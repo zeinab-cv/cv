@@ -1,4 +1,5 @@
 import { getThemeClasses } from '../../lib/theme';
+import TypeWriter from '../TypeWriter';
 
 export default function HomeTab() {
   const theme = getThemeClasses();
@@ -8,11 +9,13 @@ export default function HomeTab() {
       {/* Welcome Header*/}
       <h2 
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
-        data-aos="fade-down"
-        data-aos-delay="400"
-        data-aos-duration="800"
+        data-aos="fade-up"
       >
-        <span>Hello, welcome to my digital CV</span>
+        <TypeWriter 
+          text="Hello, welcome to my digital CV"
+          delay={20}
+          speed={40}
+        />
       </h2>
       
       {/* About Section */}

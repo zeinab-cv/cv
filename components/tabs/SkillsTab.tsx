@@ -1,6 +1,7 @@
 import { getThemeClasses } from '../../lib/theme';
 import { workingSkills, languages, topicsWorkedWith, toolsWorkedWith } from '../data/tabContentData';
 import { IconBrain, IconWorld } from '@tabler/icons-react';
+import TypeWriter from '../TypeWriter';
 
 export default function SkillsTab() {
   const theme = getThemeClasses();
@@ -58,13 +59,18 @@ export default function SkillsTab() {
     );
   };
 
+          console.log("🚀 ~ SkillsTab ~ 30:", 30)
   return (
     <div className="space-y-6">
       <h2 
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-up"
       >
-        <span>I&apos;m always trying to upskill myself</span>
+        <TypeWriter 
+          text="I'm always trying to upskill myself"
+          delay={20}
+          speed={40}
+        />
       </h2>
       {/* Working Skills and Language Skills - Side by Side */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

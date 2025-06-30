@@ -1,18 +1,22 @@
 import { getThemeClasses } from '../../lib/theme';
 import { testimonialsData } from '../data/tabContentData';
 import { IconQuote, IconMail, IconCoffee, IconHeart } from '@tabler/icons-react';
+import TypeWriter from '../TypeWriter';
 
 export default function ContactTab() {
   const theme = getThemeClasses();
 
   return (
     <div className="space-y-6">
-      <h2 
+            <h2 
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-up"
       >
-        <IconQuote size={32} />
-        <span>What My Colleagues Say About Me</span>
+        <TypeWriter 
+          text="What My Colleagues Say About Me"
+          delay={20}
+          speed={40}
+        />
       </h2>
       
       <div className="space-y-6">

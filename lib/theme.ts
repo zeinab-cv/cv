@@ -3,10 +3,10 @@ export const theme = {
   name: "Glassmorphism",
   // Glassmorphism styles
   glass: {
-    card: "bg-white/30 backdrop-blur-md border border-white/30",
-    overlay: "bg-white/25 backdrop-blur-xl border border-white/25",
-    button: "bg-white/5 backdrop-blur-sm border border-white/30",
-    buttonHover: "bg-white/35 backdrop-blur-md border border-white/50"
+    card: "bg-white/10 backdrop-blur-md border border-white/20",
+    overlay: "bg-white/10 backdrop-blur-xl border border-white/20",
+    button: "bg-white/5 backdrop-blur-sm border border-white/20",
+    buttonHover: "bg-white/35 backdrop-blur-md border border-white/30"
   },
   gradients: {
     // Background gradients
@@ -63,4 +63,5 @@ export const getThemeClasses = () => {
     // Reusable pill/tag style
     skillPill: "px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 hover:bg-gradient-to-br hover:from-yellow-300/20 hover:via-cyan-400/30 hover:to-violet-300/20 hover:scale-115 transition-all duration-300",
     skillPill2: "px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full border border-white/20 transition-all duration-300"
+  };
   };
