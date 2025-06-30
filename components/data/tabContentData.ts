@@ -12,9 +12,9 @@ export const topicsWorkedWith = [
 ];
 
 export const toolsWorkedWith = [
-  'Canva', 'WordPress', 'Microsoft Office Suite', 'Adobe Premiere Pro',
+  'Canva', 'WordPress', 'Microsoft Office Suite', 'Kling AI',
   'Google Workspace', 'Zoom', 'Slack', 'Trello',
-  'Mailchimp', 'Hootsuite', 'Asana', 'Survey Monkey'
+  'ElevenLabs', 'Leonardo AI', 'CapCut', 'Meta'
 ];
 
 export const languages = [
@@ -156,7 +156,7 @@ export const testimonialsData = [
   {
     quote: "Zeinab was an invaluable member of our team and was always easy to work with. She is a very dedicated worker with great work ethic, and could always be trusted to handle her part of the work exceptionally well.",
     author: "Camilla Ojala",
-    position: "Association Coordinator for the",
+    position: "Expert, Global Education, YMCA",
     organization: "UN Association of Finland",
     initials: "CO",
     gradient: "secondaryGradient3",
@@ -165,7 +165,7 @@ export const testimonialsData = [
   {
     quote: "Zeinab works with full heart and expertise, which I greatly admire. She is responsible, spreads positive energy, and meets people with genuine warmth. Zeinab has excellent project management skills and is a reliable colleague who takes on tasks with courage.",
     author: "Ansa Kilpeläinen",
-    position: "Officer at",
+    position: "Coordinator, Ministry for Foreign Affairs of Finland",
     organization: "Rauhankasvatusinstituutti",
     initials: "AK",
     gradient: "secondaryGradient1",

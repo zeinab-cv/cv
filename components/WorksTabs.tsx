@@ -17,8 +17,8 @@ export default function WorksTabs() {
 
   const tabs = [
     { id: 'experience', label: 'Experience', icon: IconPalette },
-    { id: 'events', label: 'Organizations i have involved with', icon: IconCalendarEvent },
-    { id: 'organizations', label: 'Events i have organized', icon: IconUsers }
+    { id: 'events', label: 'Organization Involved', icon: IconCalendarEvent },
+    { id: 'organizations', label: 'Organized Events', icon: IconUsers }
   ];
 
 
@@ -41,7 +41,7 @@ export default function WorksTabs() {
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-up"
       >
-        <span>Here are some of the organizations I have been involved with</span>
+        <span>Snapshots from my professional journey so far</span>
       </h2>
       {/* Tab Navigation */}
       <div className={`${theme.glassOverlay} rounded-3xl p-6 ${theme.glassShadow} relative`}>

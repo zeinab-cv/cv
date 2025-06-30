@@ -311,7 +311,7 @@ export const eventsData = [
     "color": "pink"
   },
   {
-    "name": "FiNGO",
+    "name": "Fingo",
     "description": "Umbrella group for Finnish development NGOs",
     "website": "https://www.fingo.fi/",
     "color": "cyan"

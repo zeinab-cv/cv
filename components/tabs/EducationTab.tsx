@@ -7,12 +7,12 @@ export default function EducationTab() {
 
   return (
     <div className="space-y-6">
-      {/* Education Section */}
+      {/* MARK: Education Section */}
       <h2 
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-up"
       >
-        <span>Fortunate to have pursued dual masters in complementary fields</span>
+        <span>A look at what I’ve studied over the years</span>
       </h2>
       <div 
         className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}
@@ -23,7 +23,7 @@ export default function EducationTab() {
           <span>Education</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {educationData.map((education, index) => (
+          {educationData.map((education, index) => ( // Map through educationData
             <div 
               key={index}
               className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-pink-300/60 hover:bg-white/10 hover:shadow-lg transition-all duration-300 flex items-start space-x-3"
@@ -37,8 +37,7 @@ export default function EducationTab() {
           ))}
         </div>
       </div>
-      
-      {/* Certificates Section */}
+      {/*MARK: Certificates Section */}
       <div 
         className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow}`}
         data-aos="fade-up"

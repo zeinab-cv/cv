@@ -5,7 +5,7 @@ export default function HomeTab() {
 
   return (
     <div className="space-y-6">
-      {/* Welcome Header */}
+      {/* Welcome Header*/}
       <h2 
         className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg flex items-center justify-center space-x-2"
         data-aos="fade-down"
@@ -19,6 +19,7 @@ export default function HomeTab() {
       <div 
         className={`${theme.glassOverlay} rounded-3xl p-8 ${theme.glassShadow} text-center relative overflow-hidden`}
         data-aos="fade-up"
+    
         data-aos-delay="600"
         data-aos-duration="600"
       >
