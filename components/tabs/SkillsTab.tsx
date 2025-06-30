@@ -57,9 +57,8 @@ export default function SkillsTab() {
         ))}
       </div>
     );
-  };
+      };
 
-          console.log("🚀 ~ SkillsTab ~ 30:", 30)
   return (
     <div className="space-y-6">
       <h2 

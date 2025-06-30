@@ -43,7 +43,7 @@ export default function WorksTabs() {
         data-aos="fade-up"
       >
         <TypeWriter 
-          text="Snapshots from my professional journey so far"
+          text="Snapshots from my professional journey"
           delay={20}
           speed={40}
         />

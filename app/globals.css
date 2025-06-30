@@ -3,6 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Custom Font Face */
+@font-face {
+  font-family: 'Gluten';
+  src: url('/Gluten-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -136,6 +145,12 @@
   .text-7xl { font-size: calc(4.5rem + 4px) !important; }
   .text-8xl { font-size: calc(6rem + 4px) !important; }
   .text-9xl { font-size: calc(8rem + 4px) !important; }
+
+  /* Custom Gluten Font */
+  .font-gluten {
+    font-family: 'Gluten', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 600;
+  }
 }
 
 /* Animated Background Effects */

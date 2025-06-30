@@ -61,7 +61,7 @@ export default function TypeWriter({
   }, [showCursor]);
 
   return (
-    <span className={className}>
+    <span className={`font-gluten ${className}`}>
       {displayText}
       {currentIndex < text.length && (
         <span className={`inline-block w-0.5 h-6 bg-current ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>
