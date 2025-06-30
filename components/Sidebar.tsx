@@ -75,7 +75,7 @@ export default function Sidebar() {
               {knowledges.map((knowledge) => (
                 <span 
                   key={knowledge}
-                  className={`${theme.skillPill}`}
+                  className={`${theme.skillPill} text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]`}
                 >
                   {knowledge}
                 </span>
