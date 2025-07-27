@@ -1,16 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
-/* Custom Font Face */
-@font-face {
-  font-family: 'Gluten';
-  src: url('/Gluten-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 
 @theme inline {
   --color-background: var(--background);
@@ -146,10 +138,11 @@
   .text-8xl { font-size: calc(6rem + 4px) !important; }
   .text-9xl { font-size: calc(8rem + 4px) !important; }
 
-  /* Custom Gluten Font */
+  /* Gluten Font from Google Fonts */
   .font-gluten {
-    font-family: 'Gluten', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: 'Gluten', cursive, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 600;
+    font-display: swap;
   }
 }
 
