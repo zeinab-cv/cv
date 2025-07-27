@@ -1,6 +1,6 @@
 import { getThemeClasses } from '../../lib/theme';
-import { educationData, certificatesData } from '../data/tabContentData';
-import { IconSchool, IconCertificate } from '@tabler/icons-react';
+import { certificatesData } from '../data/tabContentData';
+import { IconCertificate } from '@tabler/icons-react';
 import TypeWriter from '../TypeWriter';
 
 export default function EducationTab() {

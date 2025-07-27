@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { getThemeClasses } from '../../lib/theme';
 import { workExperienceByOrganization, colorMapping } from '../data/worksData';
-import { IconBriefcase, IconChevronDown, IconChevronUp, IconMapPin } from '@tabler/icons-react';
+import { IconChevronDown, IconChevronUp, IconMapPin } from '@tabler/icons-react';
 
 // Helper function to extract start year from duration string
 const getStartYear = (duration: string): number => {

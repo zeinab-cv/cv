@@ -157,7 +157,6 @@ export const testimonialsData = [
     quote: "Zeinab was an invaluable member of our team and was always easy to work with. She is a very dedicated worker with great work ethic, and could always be trusted to handle her part of the work exceptionally well.",
     author: "Camilla Ojala",
     position: "Expert, Global Education, YMCA",
-    organization: "UN Association of Finland",
     initials: "CO",
     gradient: "secondaryGradient3",
     quoteColor: "text-blue-300"
@@ -166,7 +165,6 @@ export const testimonialsData = [
     quote: "Zeinab works with full heart and expertise, which I greatly admire. She is responsible, spreads positive energy, and meets people with genuine warmth. Zeinab has excellent project management skills and is a reliable colleague who takes on tasks with courage.",
     author: "Ansa Kilpeläinen",
     position: "Coordinator, Ministry for Foreign Affairs of Finland",
-    organization: "Rauhankasvatusinstituutti",
     initials: "AK",
     gradient: "secondaryGradient1",
     quoteColor: "text-green-300"
