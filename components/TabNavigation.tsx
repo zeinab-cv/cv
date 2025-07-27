@@ -1,11 +1,4 @@
 import { getThemeClasses } from '../lib/theme';
-import { 
-  IconHome, 
-  IconFileText, 
-  IconBriefcase, 
-  IconBrain, 
-  IconPhone 
-} from '@tabler/icons-react';
 
 interface TabNavigationProps {
   activeTab: string;
@@ -16,11 +9,11 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
   const theme = getThemeClasses();
   
   const tabs = [
-    { id: 'home', label: 'Home', icon: IconHome },
-    { id: 'resume', label: 'Education', icon: IconFileText },
-    { id: 'works', label: 'Works', icon: IconBriefcase },
-    { id: 'skills', label: 'Skills', icon: IconBrain },
-    { id: 'contact', label: 'Contact', icon: IconPhone }
+    { id: 'home', label: 'Home', emoji: '🏠' },
+    { id: 'resume', label: 'Education', emoji: '🎓' },
+    { id: 'works', label: 'Works', emoji: '💼' },
+    { id: 'skills', label: 'Skills', emoji: '🧠' },
+    { id: 'contact', label: 'Contact', emoji: '📞' }
   ];
 
   const activeIndex = tabs.findIndex(tab => tab.id === activeTab);
@@ -39,7 +32,6 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
       
       <div className="flex space-x-2 relative z-10">
         {tabs.map((tab) => {
-          const IconComponent = tab.icon;
           return (
             <button
               key={tab.id}
@@ -53,7 +45,7 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
               `}
             >
               <div className="relative z-10 flex flex-col items-center space-y-1">
-                <IconComponent size={20} />
+                <span className="text-xl">{tab.emoji}</span>
                 <span className="text-sm font-medium">{tab.label}</span>
               </div>
               

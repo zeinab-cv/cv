@@ -2,11 +2,6 @@
 
 import { useState } from 'react';
 import { getThemeClasses } from '../lib/theme';
-import { 
-  IconPalette, 
-  IconCalendarEvent,
-  IconUsers
-} from '@tabler/icons-react';
 import ExperienceTab from './works/ExperienceTab';
 import EventsTab from './works/EventsTab';
 import OrganizationsTab from './works/OrganizationsTab';
@@ -17,9 +12,9 @@ export default function WorksTabs() {
   const theme = getThemeClasses();
 
   const tabs = [
-    { id: 'experience', label: 'Experience', icon: IconPalette },
-    { id: 'events', label: 'Organization Involved', icon: IconCalendarEvent },
-    { id: 'organizations', label: 'Organized Events', icon: IconUsers }
+    { id: 'experience', label: 'Experience', emoji: '💼' },
+    { id: 'events', label: 'Organization Involved', emoji: '🏛️' },
+    { id: 'organizations', label: 'Organized Events', emoji: '🎉' }
   ];
 
 
@@ -53,7 +48,6 @@ export default function WorksTabs() {
         
         <div className="flex flex-wrap gap-2 relative z-10">
           {tabs.map((tab) => {
-            const IconComponent = tab.icon;
             const isActive = activeTab === tab.id;
             return (
               <button
@@ -65,7 +59,7 @@ export default function WorksTabs() {
                     : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                <IconComponent size={18} />
+                <span className="text-lg">{tab.emoji}</span>
                 <span className="text-sm">{tab.label}</span>
               </button>
             );
