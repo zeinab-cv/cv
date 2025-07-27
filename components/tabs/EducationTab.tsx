@@ -44,7 +44,7 @@ export default function EducationTab() {
         <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1 - Master's in Peace Studies */}
           <div 
-            className="group relative bg-gradient-to-br from-blue-500/20 to-blue-600/30 hover:from-blue-500/40 hover:to-blue-600/50 rounded-3xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 cursor-pointer aspect-square flex flex-col items-center justify-center"
+            className="group relative bg-gradient-to-br from-pink-500/20 to-pink-600/30 hover:from-pink-500/40 hover:to-pink-600/50 rounded-3xl p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20 cursor-pointer aspect-square flex flex-col items-center justify-center"
             data-aos="fade-up"
             data-aos-delay="600"
             data-aos-duration="500"
@@ -65,7 +65,7 @@ export default function EducationTab() {
 
           {/* Card 2 - Master's in Social Development */}
           <div 
-            className="group relative bg-gradient-to-br from-green-500/20 to-green-600/30 hover:from-green-500/40 hover:to-green-600/50 rounded-3xl p-6 border border-green-400/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 cursor-pointer aspect-square flex flex-col items-center justify-center"
+            className="group relative bg-gradient-to-br from-purple-500/20 to-purple-600/30 hover:from-purple-500/40 hover:to-purple-600/50 rounded-3xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer aspect-square flex flex-col items-center justify-center"
             data-aos="fade-up"
             data-aos-delay="800"
             data-aos-duration="500"
@@ -86,7 +86,7 @@ export default function EducationTab() {
 
           {/* Card 3 - Bachelor's in Anthropology */}
           <div 
-            className="group relative bg-gradient-to-br from-amber-500/20 to-amber-600/30 hover:from-amber-500/40 hover:to-amber-600/50 rounded-3xl p-6 border border-amber-400/20 hover:border-amber-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 cursor-pointer aspect-square flex flex-col items-center justify-center"
+            className="group relative bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 hover:from-indigo-500/40 hover:to-indigo-600/50 rounded-3xl p-6 border border-indigo-400/20 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/20 cursor-pointer aspect-square flex flex-col items-center justify-center"
             data-aos="fade-up"
             data-aos-delay="1000"
             data-aos-duration="500"
