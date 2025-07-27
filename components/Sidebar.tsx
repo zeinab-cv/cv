@@ -14,7 +14,7 @@ export default function Sidebar() {
   
   const knowledges = [
     'Stakeholder Collaboration', 'Event Planning',
-    'Community Engagement', 'Erasmus+ and international projects', 'Project Coordination'
+    'Community Engagement', 'Erasmus+ and International Projects', 'Social Media Coordination'
   ];
   
   // Get the base path for assets

@@ -10,9 +10,9 @@ export default function TabNavigation({ activeTab, onTabChange }: TabNavigationP
   
   const tabs = [
     { id: 'home', label: 'Home', emoji: '🏠' },
-    { id: 'resume', label: 'Education', emoji: '🎓' },
-    { id: 'works', label: 'Works', emoji: '💼' },
     { id: 'skills', label: 'Skills', emoji: '🧠' },
+    { id: 'resume', label: 'Education', emoji: '🎓' },
+    { id: 'works', label: 'Experience', emoji: '💼' },
     { id: 'contact', label: 'Contact', emoji: '📞' }
   ];
 

@@ -2,7 +2,7 @@ export const workingSkills = [
   { name: 'Project Coordination', level: 90 },
   { name: 'Social Media Strategy', level: 85 },
   { name: 'Cross-cultural Communication', level: 95 },
-  { name: 'Event Management', level: 80 }
+  { name: 'Content Creation', level: 80 }
 ];
 
 export const topicsWorkedWith = [
