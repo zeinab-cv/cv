@@ -1,7 +1,6 @@
 import { getThemeClasses } from '../../lib/theme';
 import TypeWriter from '../TypeWriter';
 import Image from 'next/image';
-import { IconBrandLinkedin } from '@tabler/icons-react';
 
 export default function HomeTab() {
   const theme = getThemeClasses();
@@ -36,7 +35,7 @@ export default function HomeTab() {
         
         <div className="relative z-10 space-y-8">
           {/* Bio Section */}
-          <div className="flex items-start gap-8">
+          <div className="flex items-center gap-8">
             {/* Text Content */}
             <div className="flex-1">
               <p 
@@ -45,37 +44,8 @@ export default function HomeTab() {
                 data-aos-delay="800"
                 data-aos-duration="800"
               >
-                I work at the intersection of <span className="text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">project coordination</span>, <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">community engagement</span>, and <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">administration</span> with a passion for <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">content creation</span> and <span className="font-semibold text-purple-200 drop-shadow-[0_0_8px_rgba(221,214,254,0.7)]">social media marketing</span>.<br/><br/>I bring <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">positive attitude</span>, <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">structure</span>, and <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">purpose</span> into everything I do.
+                I&apos;m a <span className="text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">project coordinator</span> with a background in <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">anthropology</span>, <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">social development</span>, and <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">peace studies</span>. I work at the intersection of <span className="font-semibold text-purple-200 drop-shadow-[0_0_8px_rgba(221,214,254,0.7)]">youth engagement</span>, <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">community development</span>, and <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">digital communication</span>, with a passion for inclusive projects, dialogue, and creative collaboration.
               </p>
-              
-              {/* LinkedIn Button */}
-              <div className="mt-8">
-                <a 
-                  href="https://www.linkedin.com/in/zeinab-daneshpour-baa66294//" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 bg-gradient-to-r from-pink-500/20 to-purple-500/20 hover:from-pink-500/60 hover:to-purple-500/60 border-2 border-pink-400/40 hover:border-pink-300/80 rounded-full px-6 py-3 text-sm text-white/90 hover:text-white transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-pink-500/40 relative overflow-hidden animate-bounce hover:animate-none"
-                  style={{ 
-                    animation: 'bounce 2s infinite, glow 3s ease-in-out infinite alternate'
-                  }}
-                >
-                  {/* Animated background shimmer */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  
-                  <IconBrandLinkedin size={24} className="animate-pulse group-hover:animate-spin transition-all duration-300 drop-shadow-lg" />
-                  <span className="font-semibold relative z-10 group-hover:animate-pulse">I&apos;d love to connect.</span>
-                  
-                  {/* Floating hearts effect */}
-                  <div className="absolute -top-1 -right-1 text-pink-400 text-xs animate-ping">💖</div>
-                </a>
-              </div>
-              
-              <style jsx>{`
-                @keyframes glow {
-                  0% { box-shadow: 0 0 20px rgba(244, 114, 182, 0.3); }
-                  100% { box-shadow: 0 0 30px rgba(244, 114, 182, 0.8), 0 0 40px rgba(192, 132, 252, 0.4); }
-                }
-              `}</style>
             </div>
 
             {/* Profile Picture */}
@@ -85,20 +55,16 @@ export default function HomeTab() {
               data-aos-delay="1000"
               data-aos-duration="600"
             >
-              <div className="relative group cursor-pointer">
+              <div className="relative">
                 <Image
                   src={`${basePath}/zeyn-pp-optimized.jpg`}
                   alt="Profile Picture" 
                   width={280}
                   height={320}
-                  className="rounded-3xl border-4 border-white/20 hover:border-pink-300/60 shadow-lg drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_40px_rgba(244,114,182,0.6)] object-cover transition-all duration-600 ease-out hover:brightness-110 hover:contrast-105 hover:saturate-110"
+                  className="rounded-3xl border-4 border-white/20 shadow-lg drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] object-cover"
                 />
-                
-                {/* Clean ring effect - no constant animation */}
-                <div className="absolute inset-0 rounded-3xl border-2 border-pink-400/20 group-hover:border-pink-400/50 transition-all duration-600"></div>
-                
-                {/* Subtle shimmer overlay */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-transparent via-white/0 to-transparent group-hover:via-white/10 transition-all duration-600"></div>
+                {/* Glowing ring effect */}
+                <div className="absolute inset-0 rounded-3xl border-2 border-pink-400/30 animate-pulse"></div>
               </div>
             </div>
           </div>
