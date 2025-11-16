@@ -45,7 +45,7 @@ export default function HomeTab() {
                 data-aos-delay="800"
                 data-aos-duration="800"
               >
-                I work at the intersection of <span className="text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">project coordination</span>, <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">community engagement</span>, and <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">administration</span> with a passion for <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">content creation</span> and <span className="font-semibold text-purple-200 drop-shadow-[0_0_8px_rgba(221,214,254,0.7)]">social media marketing</span>.<br/><br/>I bring <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">positive attitude</span>, <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">structure</span>, and <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">purpose</span> into everything I do.
+                I work at the intersection of <span className="text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">project coordination</span>, <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">community engagement</span>, <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">youth participation</span> and <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">human rights</span>, with experience in <span className="font-semibold text-purple-200 drop-shadow-[0_0_8px_rgba(221,214,254,0.7)]">peacebuilding</span>, <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">dialogue</span>, and <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">DEI initiatives</span>.<br/><br/>Alongside this, I also work with <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">content creation</span> and <span className="font-semibold text-purple-200 drop-shadow-[0_0_8px_rgba(221,214,254,0.7)]">social media coordination</span> to support meaningful communication.<br/><br/>I bring a <span className="font-semibold text-pink-300 drop-shadow-[0_0_8px_rgba(244,114,182,0.7)]">positive attitude</span>, <span className="font-semibold text-purple-300 drop-shadow-[0_0_8px_rgba(192,132,252,0.7)]">structure</span>, and <span className="font-semibold text-pink-200 drop-shadow-[0_0_8px_rgba(251,207,232,0.7)]">purpose</span> into everything I do.
               </p>
               
               {/* LinkedIn Button */}
@@ -87,8 +87,8 @@ export default function HomeTab() {
             >
               <div className="relative group cursor-pointer">
                 <Image
-                  src={`${basePath}/zeyn-pp-optimized.jpg`}
-                  alt="Profile Picture" 
+                  src={`${basePath}/zeyn side picture.jpg`}
+                  alt="Profile Picture"
                   width={280}
                   height={320}
                   className="rounded-3xl border-4 border-white/20 hover:border-pink-300/60 shadow-lg drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_40px_rgba(244,114,182,0.6)] object-cover transition-all duration-600 ease-out hover:brightness-110 hover:contrast-105 hover:saturate-110"
@@ -144,16 +144,16 @@ export default function HomeTab() {
             data-aos-delay="1600"
             data-aos-duration="500"
           >
-            <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">📱</div>
+            <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">🕊️</div>
             <h3 className="text-lg font-bold text-white mb-2 text-center group-hover:opacity-0 transition-opacity duration-300">
-              Digital Content & Social Media
+              Peace, Dialogue & DEI
             </h3>
             
             {/* Hover Description */}
             <div className="absolute inset-0 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute inset-0 bg-black/30 rounded-3xl"></div>
               <p className="relative text-white text-sm font-semibold text-center leading-relaxed">
-                Managing social media using Canva, AI tools for multiple organizations.
+                Promoting diversity, equity, and inclusion through dialogue and facilitation.
               </p>
             </div>
           </div>

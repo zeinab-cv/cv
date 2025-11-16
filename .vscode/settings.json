@@ -50,13 +50,15 @@
   },
   "workbench.colorCustomizations": {
     "editor.selectionBackground": "#107707",
-    "editorCursor.background": "#6d1a72",
-    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
-    "editor.selectionHighlightBackground": "#02660a48",
+    "editor.wordHighlightBackground": "#1ae10800",
+    "editor.wordHighlightStrongBackground": "#0ff90700",
     "editor.wordHighlightBorder": "#ffffff00",
+    "editor.selectionHighlightBackground": "#02660a48",
+    "editor.selectionHighlightBorder": "#000000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "editorCursor.background": "#6d1a72",
     "editorOverviewRuler.selectionHighlightForeground": "#0000",
     "editorOverviewRuler.rangeHighlightForeground": "#0000",
-    "editorOverviewRuler.wordHighlightForeground": "#0000",
     "editorOverviewRuler.bracketMatchForeground": "#0000",
     "editorOverviewRuler.findMatchForeground": "#0000",
     "editorOverviewRuler.modifiedForeground": "#0000",
@@ -69,13 +71,12 @@
     "[Aura Dracula Spirit (Soft)]": {
       "sideBar.background": "#191521"
     },
+    "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
     "editorWarning.foreground": "#00000000",
     "editorGutter.warningBackground": "#00000000",
     "editor.selectionForeground": "#06ff27",
-    "editor.selectionHighlightBorder": "#000000",
     "editor.findMatchBackground": "#f90ee2",
     "editorGutter.foldingControlForeground": "#888888",
-    "editor.wordHighlightBackground": "#1ae10800",
     "editor.findMatchHighlightBorder": "#f90ee2",
     "editorCursor.foreground": "#ffff00",
     "peekViewEditor.background": "#1e1e1e",
@@ -97,8 +98,7 @@
     "editorBracketHighlight.foreground1": "#f90ee2",
     "editorBracketHighlight.foreground2": "#f90ee2",
     "editor.foldBackground": "#00000000",
-    "editor.wordHighlightStrongBorder": "#f90ee2",
-    "editor.wordHighlightStrongBackground": "#0ff90700"
+    "editor.wordHighlightStrongBorder": "#f90ee2"
   },
   "hidefiles.configurationType": "global",
   "files.exclude": {

@@ -23,13 +23,13 @@ export default function Sidebar() {
   return (
     <div className="sticky top-8 h-fit mt">
       {/* Main Profile Card */}
-          <div className={`w-48 h-48 absolute -top-24 left-1/2 -translate-x-1/2 rounded-2xl ${theme.primaryGradient} p-2 flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-[100]`}>
+          <div className={`w-50 h-54 absolute -top-28 left-1/2 -translate-x-1/2 rounded-2xl ${theme.primaryGradient} p-2 flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-[100]`}>
             <div className="w-full h-full rounded-lg overflow-hidden">
-              <Image 
-                src={`${basePath}/profilePicture.png`}
+              <Image
+                src={`${basePath}/zeny pp 2.jpg`}
                 alt="Zeinab Daneshpour"
-                width={176}
-                height={176}
+                width={240}
+                height={350}
                 className="object-cover w-full h-full"
                 priority
               />
